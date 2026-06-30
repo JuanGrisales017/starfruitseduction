@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starfruit Seduction Agency</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500&display=stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -14,86 +14,71 @@
             background-color: #000000;
             color: #fff;
             min-height: 100vh;
-            padding: 40px;
+            display: flex;
+            justify-content: center; /* Centrado horizontal */
+            align-items: center;     /* Centrado vertical */
             font-family: 'Cinzel', serif;
+        }
+
+        /* Contenedor centralizado */
+        .logo-container {
             display: flex;
             flex-direction: column;
+            align-items: center; /* Alinea los elementos internos al centro */
+            text-align: center;
         }
 
-        /* --- LOGO IZQUIERDA (El que ya tenías) --- */
-        .logo-left {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: absolute;
-            top: 40px;
-            left: 40px;
+        .title-starfruit { 
+            font-size: 2.5rem; 
+            font-weight: 500; 
+            color: #cca464; 
+            letter-spacing: 6px; 
+            margin-bottom: 10px; 
+        }
+        
+        .row-with-lines { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 100%; 
+            margin: 2px 0; 
         }
 
-        /* --- ESTILOS COMPARTIDOS DEL BLOQUE DE LETRAS --- */
-        .title-starfruit { font-size: 1.8rem; font-weight: 500; color: #cca464; letter-spacing: 4px; line-height: 1; margin-bottom: 6px; }
-        .row-with-lines { display: flex; align-items: center; justify-content: flex-start; width: 100%; margin: 2px 0; }
-        .line-right { width: 25px; height: 1px; margin-left: 10px; background: linear-gradient(to right, rgba(204,164,100,0.5), rgba(204,164,100,0)); }
-        .text-seduction { font-size: 0.7rem; font-weight: 600; color: #8a1212; letter-spacing: 3px; }
-        .text-agency { font-family: 'Montserrat', sans-serif; font-size: 0.55rem; font-weight: 400; color: #b3b3b3; letter-spacing: 5px; }
-
-        /* --- CONTENEDOR CENTRAL DE BOTONES CON TÍTULO --- */
-        .interaction-wrapper {
-            margin: auto; /* Centra todo el grupo en la pantalla */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 280px;
+        .line {
+            width: 30px; 
+            height: 1px; 
+            background: rgba(204,164,100,0.5);
+            margin: 0 10px;
         }
 
-        /* Ajuste específico para que el título central esté centrado */
-        .logo-center { display: flex; flex-direction: column; align-items: center; margin-bottom: 25px; }
-        .logo-center .row-with-lines { justify-content: center; }
-        .logo-center .line-left { width: 25px; height: 1px; background: linear-gradient(to left, rgba(204,164,100,0.5), rgba(204,164,100,0)); margin-right: 10px; }
-
-        .btn { 
-            width: 100%;
-            border: 1px solid #cca464; padding: 12px 0; border-radius: 50px; 
-            color: #cca464; text-decoration: none; font-size: 0.75rem; letter-spacing: 2px;
-            text-transform: uppercase; text-align: center; margin-bottom: 15px;
-            transition: 0.4s;
+        .text-seduction { 
+            font-size: 0.8rem; 
+            font-weight: 600; 
+            color: #8a1212; 
+            letter-spacing: 5px; 
         }
-        .btn:hover { background: #cca464; color: black; box-shadow: 0 0 15px #cca464; }
+        
+        .text-agency { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 0.6rem; 
+            font-weight: 400; 
+            color: #b3b3b3; 
+            letter-spacing: 7px; 
+        }
     </style>
 </head>
 <body>
 
-    <div class="logo-left">
+    <div class="logo-container">
         <h1 class="title-starfruit">STARFRUIT</h1>
+        
         <div class="row-with-lines">
             <span class="text-seduction">SEDUCTION</span>
-            <span class="line-right"></span>
         </div>
+        
         <div class="row-with-lines">
             <span class="text-agency">AGENCY</span>
-            <span class="line-right"></span>
         </div>
-    </div>
-
-    <div class="interaction-wrapper">
-        <div class="logo-center">
-            <h1 class="title-starfruit">STARFRUIT</h1>
-            <div class="row-with-lines">
-                <span class="line-left"></span>
-                <span class="text-seduction">SEDUCTION</span>
-                <span class="line-right"></span>
-            </div>
-            <div class="row-with-lines">
-                <span class="line-left"></span>
-                <span class="text-agency">AGENCY</span>
-                <span class="line-right"></span>
-            </div>
-        </div>
-
-        <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
-        <a href="https://www.instagram.com/starfruitseduction/" class="btn">Instagram</a>
-        <a href="https://x.com/" class="btn">X</a>
     </div>
 
 </body>
