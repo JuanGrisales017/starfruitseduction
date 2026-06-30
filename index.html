@@ -12,133 +12,223 @@
         }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #07070a;
-            background-image: linear-gradient(180deg, rgba(7,7,10,0.8) 0%, rgba(7,7,10,0.9) 100%), 
-                              url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1920');
-            background-size: cover;
-            background-position: center;
+            background-color: #030305;
+            background-image: 
+                radial-gradient(circle at 90% 10%, rgba(255, 0, 127, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(0, 255, 255, 0.08) 0%, transparent 40%);
             background-attachment: fixed;
             color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* BARRA SUPERIOR (HEADER) */
+        header {
+            width: 100%;
+            padding: 24px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        .nav-logo {
+            font-weight: 900;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+        }
+        .nav-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555866;
+            border: 1px solid #222530;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .main-content {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
+            padding: 140px 20px 60px 20px;
         }
         .container {
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
+            text-align: center;
         }
+
+        /* SECCIÓN HERO (TÍTULO) */
         h1 {
-            font-size: 3.2rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #ffffff;
-            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+            text-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
             font-weight: 900;
         }
         .subtitle {
-            font-size: 1rem;
-            color: #00ffff;
+            font-size: 0.9rem;
+            color: #8e92a6;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 40px;
-            text-shadow: 0 0 8px rgba(0,255,255,0.5);
+            font-weight: bold;
         }
-        .menu-buttons {
-            display: flex;
-            flex-direction: column;
+
+        /* DISTRIBUCIÓN POR FILAS ASIMÉTRICAS */
+        .grid-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 16px;
-            align-items: center;
+            margin-bottom: 16px;
         }
-        .btn-neon {
+        @media (max-width: 480px) {
+            .grid-row-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .row-single {
+            margin-bottom: 30px;
+        }
+
+        /* TEXTO SEPARADOR MEDIO */
+        .divider-text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff007f;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .divider-subtext {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666a7a;
+            margin-bottom: 20px;
+        }
+
+        /* ESTILOS DE BOTONES */
+        .btn-base {
             display: inline-block;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            padding: 16px 40px;
+            padding: 16px 30px;
             border-radius: 50px;
-            width: 100%;
-            max-width: 340px;
             letter-spacing: 1.5px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            
-            /* Fondo oscuro con borde de degradado neón */
-            background: #07070a;
-            border: 3px solid transparent;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .btn-base:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-filled-models {
+            background: linear-gradient(90deg, #ff007f, #b34eff);
+            box-shadow: 0 4px 20px rgba(255, 0, 127, 0.4);
+        }
+        .btn-filled-models:hover {
+            box-shadow: 0 6px 25px rgba(255, 0, 127, 0.7);
+        }
+
+        .btn-dark-contact {
+            background: #111216;
+            border: 1px solid #222530;
+        }
+        .btn-dark-contact:hover {
+            background: #16181d;
+            border-color: #44495e;
+        }
+
+        .btn-border-telegram {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #333644;
+        }
+        .btn-border-telegram:hover {
+            border-color: #0088cc;
+            box-shadow: 0 0 15px rgba(0, 136, 204, 0.3);
+        }
+
+        .btn-neon-instagram {
+            background: #030305;
+            border: 2.5px solid transparent;
             background-origin: border-box;
             background-clip: padding-box, border-box;
+            background-image: linear-gradient(#030305, #030305), linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.15);
         }
-        
-        /* Botón 1: Lista de Modelos (Degradado Rosa/Blanco) */
-        .btn-models {
-            background-image: linear-gradient(#07070a, #07070a), linear-gradient(45deg, #ff007f, #ffffff);
-            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.2);
-        }
-        .btn-models:hover {
-            box-shadow: 0 6px 25px rgba(255, 0, 127, 0.6);
-            transform: scale(1.03);
+        .btn-neon-instagram:hover {
+            box-shadow: 0 6px 25px rgba(220, 39, 67, 0.5);
         }
 
-        /* Botón 2: Telegram (Degradado Azul/Cian) */
-        .btn-telegram {
-            background-image: linear-gradient(#07070a, #07070a), linear-gradient(45deg, #0088cc, #00ffff);
-            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
-        }
-        .btn-telegram:hover {
-            box-shadow: 0 6px 25px rgba(0, 255, 255, 0.6);
-            transform: scale(1.03);
-        }
-
-        /* Botón 3: Instagram (Degradado Clásico de Instagram) */
-        .btn-instagram {
-            background-image: linear-gradient(#07070a, #07070a), linear-gradient(45deg, #f09433, #dc2743, #bc1888);
-            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.2);
-        }
-        .btn-instagram:hover {
-            box-shadow: 0 6px 25px rgba(220, 39, 67, 0.6);
-            transform: scale(1.03);
-        }
-
-        /* Botón 4: Contacto (Degradado Esmeralda/Verde Neón) */
-        .btn-contact {
-            background-image: linear-gradient(#07070a, #07070a), linear-gradient(45deg, #00ff87, #60efff);
-            box-shadow: 0 4px 15px rgba(0, 255, 135, 0.2);
-        }
-        .btn-contact:hover {
-            box-shadow: 0 6px 25px rgba(0, 255, 135, 0.6);
-            transform: scale(1.03);
-        }
-
-        .footer-text {
-            margin-top: 50px;
-            font-size: 0.8rem;
-            color: #555;
+        footer {
+            width: 100%;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #414452;
             letter-spacing: 1px;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>STARFRUIT SEDUCTION</h1> 
-        <div class="subtitle">We turn attention into subscriptions</div>
-        
-        <div class="menu-buttons">
-            <!-- REEMPLAZA LOS ENLACES "href" CON TUS LINKS REALES -->
-            <a href="TU_LINK_DE_MODELOS" class="btn-neon btn-models">EXPLORE MODELS →</a>
-            <a href="https://t.me/starfruitseduction" class="btn-neon btn-telegram">JOIN TELEGRAM →</a>
-            <a href="https://www.instagram.com/starfruitseduction/" class="btn-neon btn-instagram">JOIN ON INSTAGRAM →</a>
-            <a href="mailto:starfruitseduction@starfruitseduction.com" class="btn-neon btn-contact">CONTACT US →</a>
+    <!-- LOGOTIPO SUPERIOR -->
+    <header>
+        <div class="nav-logo">★ Starfruit Seduction</div>
+        <div class="nav-tag">OFM Agency</div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            
+            <h1>STARFRUIT SEDUCTION</h1> 
+            <div class="subtitle">ATTENTION INTO SUBSCRIPTIONS.</div>
+            
+            <!-- FILA 1: BOTONES EN PAREJA -->
+            <div class="grid-row-2">
+                <a href="TU_LINK_DE_MODELOS" class="btn-base btn-filled-models">EXPLORE MODELS →</a>
+                <a href="mailto:starfruitseduction@starfruitseduction.com" class="btn-base btn-dark-contact">CONTACT US →</a>
+            </div>
+            
+            <!-- FILA 2: TELEGRAM CENTRADO -->
+            <div class="row-single">
+                <a href="https://t.me/starfruitseduction" class="btn-base btn-border-telegram">🚀 NEW RELEASES • TELEGRAM →</a>
+            </div>
+            
+            <!-- FILA 3: TEXTO SEPARADOR -->
+            <div class="divider-text">STAY CONNECTED</div>
+            <div class="divider-subtext">Behind the scenes, updates & more.</div>
+            
+            <!-- FILA 4: INSTAGRAM EN GRANDE -->
+            <div class="row-single">
+                <a href="https://www.instagram.com/starfruitseduction/" class="btn-base btn-neon-instagram">📸 JOIN ON INSTAGRAM →</a>
+            </div>
+
         </div>
-        
-        <div class="footer-text">© 2026 STARFRUIT SEDUCTION. ALL RIGHTS RESERVED.</div>
     </div>
+
+    <footer>
+        © 2026 STARFRUIT SEDUCTION. ALL RIGHTS RESERVED.
+    </footer>
 
 </body>
 </html>
-
