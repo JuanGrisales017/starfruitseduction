@@ -3,84 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starfruit Seduction Agency</title>
+    <title>BLOWKETING | Agency</title>
     <style>
         :root {
-            --bg-dark: #0a0a0a;
-            --gold: #c5a059;
+            --bg-color: #050505;
+            --accent-pink: #ff00ff;
+            --accent-blue: #00ffff;
             --text-white: #ffffff;
-            --text-muted: #b0b0b0;
+            --btn-bg: rgba(255, 255, 255, 0.05);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg-dark); color: var(--text-white); font-family: 'Times New Roman', serif; }
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-white); 
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        linear-gradient(90deg, rgba(255,0,255,0.2), rgba(0,255,255,0.2));
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        /* Header */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #222; }
-        .logo-container { display: flex; align-items: center; gap: 10px; }
-        .star-icon { color: var(--gold); font-size: 24px; }
-        .logo-text { font-size: 18px; letter-spacing: 2px; font-weight: bold; color: var(--text-white); text-transform: uppercase; line-height: 1.2; }
-        .logo-sub { font-size: 10px; letter-spacing: 5px; color: var(--text-muted); display: block; }
-        
-        nav { display: flex; align-items: center; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-btn { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold) !important; transition: 0.3s; }
-        .contact-btn:hover { background: var(--gold); color: white !important; }
+        /* Navbar */
+        nav { width: 100%; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: bold; font-size: 20px; letter-spacing: 2px; }
+        .menu { display: flex; gap: 20px; font-size: 12px; text-transform: uppercase; }
+        .btn-kick { border: 1px solid white; padding: 5px 15px; border-radius: 20px; font-size: 12px; }
 
         /* Hero */
-        .hero { padding: 80px 5%; display: flex; align-items: center; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); }
-        .hero-content { max-width: 50%; }
-        .subtitle { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-size: 14px; }
-        h1 { font-size: 60px; margin-bottom: 20px; line-height: 1.1; }
-        .hero-text { color: var(--text-muted); margin-bottom: 30px; line-height: 1.6; }
-        
-        /* Botones de acción */
-        .cta-container { display: flex; gap: 15px; flex-wrap: wrap; }
-        .btn { display: inline-block; padding: 12px 25px; border: 1px solid var(--gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; transition: 0.3s; }
-        .btn:hover { background: var(--gold); color: black; }
+        .hero { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 80px; text-transform: uppercase; margin-bottom: 10px; color: white; text-shadow: 0 0 20px var(--accent-pink); }
+        .hero p { color: var(--text-white); margin-bottom: 40px; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Features */
-        .features { display: grid; grid-template-columns: repeat(4, 1fr); padding: 60px 5%; text-align: center; border-bottom: 1px solid #222; }
-        .feature-item h3 { color: var(--gold); margin: 15px 0; font-size: 16px; }
-        .feature-item p { font-size: 13px; color: var(--text-muted); }
+        /* Buttons */
+        .btn-group { display: flex; flex-direction: column; gap: 15px; align-items: center; }
+        .main-btn { padding: 12px 30px; border: 1px solid white; border-radius: 30px; color: white; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: 0.3s; width: 300px; text-align: center;}
+        .main-btn:hover { background: white; color: black; }
+        
+        .stay-connected { font-size: 12px; margin-top: 20px; text-transform: uppercase; color: #888; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <div class="star-icon">★</div>
-            <div class="logo-text">STARFRUIT<br><span class="logo-sub">SEDUCTION AGENCY</span></div>
+    <nav>
+        <div class="logo">BLOWKETING</div>
+        <div class="menu">
+            <span>Models</span>
+            <span>Telegram</span>
+            <span>Manyvids</span>
+            <span>Book</span>
+            <span>Merch</span>
+            <span>Contact</span>
         </div>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Modelos</a>
-            <a href="#" class="contact-btn">Contactanos</a>
-        </nav>
-    </header>
+        <div class="btn-kick">KICK</div>
+    </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="subtitle">Agencia de Modelos</div>
-            <h1>BELLEZA QUE INSPIRA</h1>
-            <p class="hero-text">Conectamos el talento con las mejores oportunidades. Profesionalismo, elegancia y exclusividad en cada paso que damos.</p>
-            
-            <div class="cta-container">
-                <a href="#" class="btn">Instagram</a>
-                <a href="#" class="btn">Telegram</a>
-                <a href="mailto:tuemail@ejemplo.com" class="btn">Email</a>
-                <a href="#" class="btn" style="background: var(--gold); color: black;">Ver Modelos</a>
-            </div>
+    <main class="hero">
+        <p>Premium Creator • Est. 2024</p>
+        <h1>BLOWKETING</h1>
+        <p>We turn beauty into attention.<br>Attention into subscriptions.</p>
+
+        <div class="btn-group">
+            <a href="#" class="main-btn">Explore Models →</a>
+            <a href="#" class="main-btn">Follow on X →</a>
+            <a href="#" class="main-btn">New Releases • Telegram →</a>
+            <div class="stay-connected">Stay connected<br>Behind the scenes, updates & more.</div>
+            <a href="#" class="main-btn">Join on Instagram →</a>
         </div>
-    </section>
-
-    <section class="features">
-        <div class="feature-item"><h3>EXCLUSIVIDAD</h3><p>Trabajamos con talento seleccionado.</p></div>
-        <div class="feature-item"><h3>PROFESIONALISMO</h3><p>Formación y acompañamiento.</p></div>
-        <div class="feature-item"><h3>OPORTUNIDADES</h3><p>Conexiones de alto nivel.</p></div>
-        <div class="feature-item"><h3>DISCRECIÓN</h3><p>Confidencialidad total.</p></div>
-    </section>
+    </main>
 
 </body>
 </html>
