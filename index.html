@@ -14,71 +14,77 @@
             background-color: #000000;
             color: #fff;
             min-height: 100vh;
-            display: flex;
-            justify-content: center; /* Centrado horizontal */
-            align-items: center;     /* Centrado vertical */
+            padding: 40px;
             font-family: 'Cinzel', serif;
-        }
-
-        /* Contenedor centralizado */
-        .logo-container {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Alinea los elementos internos al centro */
-            text-align: center;
+            align-items: center;
+            justify-content: center;
         }
 
-        .title-starfruit { 
-            font-size: 2.5rem; 
-            font-weight: 500; 
-            color: #cca464; 
-            letter-spacing: 6px; 
-            margin-bottom: 10px; 
+        /* Bloque de logo centrado principal */
+        .logo-main-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
         }
+
+        .title-starfruit { font-size: 2.5rem; font-weight: 500; color: #cca464; letter-spacing: 6px; margin-bottom: 10px; }
         
-        .row-with-lines { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            width: 100%; 
-            margin: 2px 0; 
+        .row-with-lines { display: flex; align-items: center; justify-content: center; width: 100%; margin: 3px 0; }
+        .line-left, .line-right { width: 30px; height: 1px; background: rgba(204,164,100,0.5); }
+        .line-left { margin-right: 15px; }
+        .line-right { margin-left: 15px; }
+
+        .text-seduction { font-size: 0.8rem; font-weight: 600; color: #8a1212; letter-spacing: 5px; }
+        .text-agency { font-family: 'Montserrat', sans-serif; font-size: 0.6rem; font-weight: 400; color: #b3b3b3; letter-spacing: 7px; }
+
+        /* Contenedor de botones con título superior */
+        .interaction-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 280px;
         }
 
-        .line {
-            width: 30px; 
-            height: 1px; 
-            background: rgba(204,164,100,0.5);
-            margin: 0 10px;
-        }
+        .sub-logo-title { margin-bottom: 20px; } /* Título sobre botones */
 
-        .text-seduction { 
-            font-size: 0.8rem; 
-            font-weight: 600; 
-            color: #8a1212; 
-            letter-spacing: 5px; 
+        .btn { 
+            width: 100%;
+            border: 1px solid #cca464; padding: 12px 0; border-radius: 50px; 
+            color: #cca464; text-decoration: none; font-size: 0.75rem; letter-spacing: 2px;
+            text-transform: uppercase; text-align: center; margin-bottom: 15px;
+            transition: 0.4s;
         }
-        
-        .text-agency { 
-            font-family: 'Montserrat', sans-serif; 
-            font-size: 0.6rem; 
-            font-weight: 400; 
-            color: #b3b3b3; 
-            letter-spacing: 7px; 
-        }
+        .btn:hover { background: #cca464; color: black; box-shadow: 0 0 15px #cca464; }
     </style>
 </head>
 <body>
 
-    <div class="logo-container">
+    <!-- Logo Principal Centrado -->
+    <div class="logo-main-center">
         <h1 class="title-starfruit">STARFRUIT</h1>
-        
         <div class="row-with-lines">
             <span class="text-seduction">SEDUCTION</span>
         </div>
-        
         <div class="row-with-lines">
             <span class="text-agency">AGENCY</span>
         </div>
+    </div>
+
+    <!-- Bloque de botones con el nombre de la agencia arriba -->
+    <div class="interaction-wrapper">
+        <div class="row-with-lines sub-logo-title">
+            <span class="line-left"></span>
+            <span class="text-seduction">SEDUCTION</span>
+            <span class="line-right"></span>
+        </div>
+
+        <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
+        <a href="https://www.instagram.com/starfruitseduction/" class="btn">Instagram</a>
+        <a href="https://x.com/" class="btn">X</a>
     </div>
 
 </body>
