@@ -12,17 +12,16 @@
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { background: #000; color: white; font-family: 'Cinzel', serif; overflow-x: hidden; }
 
-        /* --- NAV INVISIBLE (Efecto Glass) --- */
+        /* --- NAV INVISIBLE --- */
         nav { 
             width: 100%; padding: 20px 5%; display: flex; align-items: center; justify-content: space-between;
             position: fixed; top: 0; z-index: 1000;
-            background: rgba(255, 255, 255, 0.02); /* Fondo casi nulo */
-            backdrop-filter: blur(15px); /* Desenfoque intenso */
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Borde apenas visible */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* --- LOGO COMPACTO --- */
         .brand-container { display: flex; flex-direction: column; align-items: center; gap: 0px; line-height: 1; width: 180px; }
         .title-main { font-size: 1.5rem; color: var(--gold); letter-spacing: 6px; }
         .subtitle-row { display: flex; align-items: center; justify-content: center; width: 100%; margin: 2px 0; }
@@ -30,7 +29,6 @@
         .title-sub { font-size: 0.6rem; color: var(--wine-red); letter-spacing: 4px; text-transform: uppercase; }
         .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; margin-top: -2px; }
 
-        /* --- ENLACES Y CONTACTO --- */
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: #fff; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
         .btn-contact {
@@ -40,27 +38,31 @@
         }
         .btn-contact:hover { background: var(--gold); color: black; }
 
-        /* --- SECCIÓN INICIO CON FONDO --- */
+        /* --- SECCIÓN INICIO ESTILO MÁRMOL --- */
         #inicio {
             min-height: 100vh;
             width: 100%;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('fondo-inicio.jpg');
+            background: url('59398.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            padding: 0 10%;
+            text-align: left;
         }
 
-        .btn {
-            padding: 15px 30px; background: transparent; color: white; border: 1px solid var(--gold);
-            border-radius: 50px; text-transform: uppercase; font-weight: bold; cursor: pointer;
-            transition: 0.4s; text-decoration: none; display: block; text-align: center; width: 250px;
+        .hero-content { max-width: 500px; }
+        .hero-label { color: var(--gold); font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; display: block; font-family: 'Montserrat', sans-serif; }
+        .hero-title { font-size: 3.5rem; color: #fff; line-height: 1.1; margin-bottom: 20px; }
+        .hero-desc { color: var(--gray-text); font-family: 'Montserrat', sans-serif; margin-bottom: 30px; line-height: 1.6; }
+        
+        .btn-hero {
+            display: block; width: 220px; padding: 12px; border: 1px solid var(--gold);
+            color: white; text-decoration: none; text-align: center; margin-bottom: 15px;
+            border-radius: 5px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;
+            transition: 0.4s; font-family: 'Montserrat', sans-serif;
         }
-        .btn:hover { background: var(--gold); color: black; }
-        .btn-stack { display: flex; flex-direction: column; gap: 20px; }
+        .btn-hero:hover { background: var(--gold); color: black; }
     </style>
 </head>
 <body>
@@ -85,12 +87,17 @@
     </nav>
 
     <section id="inicio">
-        <div class="btn-stack">
-            <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
-            <a href="https://www.instagram.com/starfruitseduction/" class="btn">Instagram</a>
+        <div class="hero-content">
+            <span class="hero-label">— AGENCIA DE MODELOS</span>
+            <h1 class="hero-title">BELLEZA QUE INSPIRA</h1>
+            <p class="hero-desc">
+                Conectamos el talento con las mejores oportunidades. 
+                Descubre un mundo de elegancia, exclusividad y profesionalismo.
+            </p>
+            <a href="https://t.me/starfruitseduction" class="btn-hero">TELEGRAM</a>
+            <a href="https://www.instagram.com/starfruitseduction/" class="btn-hero">INSTAGRAM</a>
         </div>
     </section>
-    
 
 </body>
 </html>
