@@ -14,15 +14,17 @@
             background-color: #000000;
             color: #fff;
             min-height: 100vh;
-            padding: 20px; /* Padding reducido para acercar a la esquina */
+            padding: 40px;
             font-family: 'Cinzel', serif;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Botón contacto arriba derecha */
         .top-contact {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: 40px;
         }
 
         .btn-contact-top {
@@ -36,31 +38,29 @@
         .logo-text-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Alinea todo a la izquierda */
-            width: 100%;
+            align-items: flex-start;
             max-width: 300px;
-            text-align: left;
         }
 
-        .title-starfruit { font-size: 1.8rem; font-weight: 500; color: #cca464; letter-spacing: 4px; line-height: 1; margin-bottom: 6px; }
+        .title-starfruit { font-size: 1.8rem; font-weight: 500; color: #cca464; letter-spacing: 4px; margin-bottom: 6px; }
         
-        .row-with-lines { display: flex; align-items: center; justify-content: flex-start; width: 100%; margin: 2px 0; }
-        .line-right { width: 25px; height: 1px; margin-left: 10px; background: linear-gradient(to right, rgba(204,164,100,0.5), rgba(204,164,100,0)); }
+        .row-with-lines { display: flex; align-items: center; justify-content: flex-start; width: 100%; margin: 3px 0; }
+        .line-left, .line-right { width: 25px; height: 1px; }
+        .line-left { background: linear-gradient(to left, rgba(204,164,100,0.5), rgba(204,164,100,0)); margin-right: 10px; }
+        .line-right { background: linear-gradient(to right, rgba(204,164,100,0.5), rgba(204,164,100,0)); margin-left: 10px; }
 
         .text-seduction { font-size: 0.7rem; font-weight: 600; color: #8a1212; letter-spacing: 3px; }
         .text-agency { font-family: 'Montserrat', sans-serif; font-size: 0.55rem; font-weight: 400; color: #b3b3b3; letter-spacing: 5px; }
 
-        /* Centrar botones abajo */
+        /* Contenedor de botones alineado a la derecha y abajo */
         .interaction-container {
-            margin-top: 50px;
+            margin-top: auto; /* Empuja los botones hacia abajo */
+            align-self: flex-end; /* Alinea los botones a la derecha */
             display: flex;
             flex-direction: column;
             gap: 15px;
-            align-items: center;
             width: 100%;
             max-width: 280px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .btn { 
@@ -72,10 +72,6 @@
         }
         
         .btn:hover { background: #cca464; color: black; box-shadow: 0 0 15px #cca464; }
-
-        @media (min-width: 768px) {
-            .logo-text-container { max-width: 400px; }
-        }
     </style>
 </head>
 <body>
@@ -86,11 +82,15 @@
 
     <div class="logo-text-container">
         <h1 class="title-starfruit">STARFRUIT</h1>
+        
         <div class="row-with-lines">
+            <span class="line-left"></span>
             <span class="text-seduction">SEDUCTION</span>
             <span class="line-right"></span>
         </div>
+        
         <div class="row-with-lines">
+            <span class="line-left"></span>
             <span class="text-agency">AGENCY</span>
             <span class="line-right"></span>
         </div>
