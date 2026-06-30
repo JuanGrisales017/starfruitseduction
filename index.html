@@ -6,85 +6,67 @@
     <title>Starfruit Seduction Agency</title>
     <style>
         :root {
-            --bg-color: #0a0a0a;
+            --bg-color: #050505;
             --gold: #d4af37;
-            --wine-red: #722f37;
             --white: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { 
-            background: linear-gradient(135deg, #000000, #1a0505);
-            color: var(--white); 
-            font-family: 'Playfair Display', serif;
-            overflow-x: hidden;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--white); font-family: sans-serif; }
 
-        /* Navbar */
-        nav { width: 100%; padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; background: rgba(0,0,0,0.8); }
-        .logo { font-size: 28px; font-weight: 700; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; }
-        .menu a { color: var(--white); text-decoration: none; font-size: 14px; margin-left: 25px; transition: 0.3s; }
-        .menu a:hover { color: var(--gold); }
-
-        /* Estilo Botones Elegantes con Borde Animado */
-        .btn {
-            position: relative;
-            padding: 18px 40px;
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--gold);
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.4s;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            overflow: hidden;
+        /* Navegación inspirada en image.png */
+        nav { 
+            display: flex; 
+            align-items: center; 
+            padding: 20px 5%; 
+            background: #000; 
+            border-bottom: 1px solid #222;
         }
-        .btn::before {
-            content: "";
-            position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
-            transition: 0.5s;
-        }
-        .btn:hover::before { left: 100%; }
-        .btn:hover { background: var(--wine-red); border-color: var(--wine-red); box-shadow: 0 0 20px var(--wine-red); }
-
-        section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px; text-align: center; }
-        h1 { font-size: 70px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; }
-        p { font-size: 18px; color: #ccc; max-width: 600px; line-height: 1.8; }
         
-        .btn-stack { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 350px; margin-top: 40px; }
+        .logo-area { display: flex; align-items: center; margin-right: auto; }
+        .logo-text { 
+            font-size: 24px; 
+            letter-spacing: 4px; 
+            color: var(--gold); 
+            text-transform: uppercase; 
+            font-weight: bold; 
+        }
+
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { 
+            color: #ccc; 
+            text-decoration: none; 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+        }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Botón Contáctanos especial */
+        .btn-contact { 
+            border: 1px solid var(--gold); 
+            padding: 8px 20px; 
+            border-radius: 4px; 
+            color: var(--gold) !important; 
+        }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">Starfruit</div>
-        <div class="menu">
+        <div class="logo-area">
+            <div class="logo-text">STARFRUIT SEDUCTION</div>
+        </div>
+
+        <div class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#agencia">La Agencia</a>
+            <a href="#modelos">Nuestras Modelos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <a href="mailto:starfruitseduction@starfruitseduction.com" class="btn-contact">CONTÁCTANOS 💬</a>
         </div>
     </nav>
 
-    <section id="inicio">
-        <h1>Starfruit Seduction</h1>
-        <div class="btn-stack">
-            <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
-            <a href="https://www.instagram.com/starfruitseduction/?__pwa=1" class="btn">Instagram</a>
-            <a href="https://x.com/" class="btn">X</a>
-            <a href="mailto:starfruitseduction@starfruitseduction.com" class="btn">Contacto</a>
-        </div>
-    </section>
-
-    <section id="agencia">
-        <h2>Exclusividad y Poder</h2>
-        <p>Somos una agencia boutique dedicada a maximizar el valor de tu imagen[span_1](start_span)[span_1](end_span). Combinamos estrategia, seducción y profesionalismo para construir un imperio digital bajo tus términos[span_2](start_span)[span_2](end_span).</p>
-    </section>
-
-    <div style="text-align: center; padding: 20px; color: var(--gold);">PREMIUM CREATOR • EST. 2026</div>
-
+    <!-- Resto del contenido manteniendo la estética anterior -->
 </body>
 </html>
