@@ -14,49 +14,44 @@
 
         /* --- NAV COMPACTO --- */
         nav { 
-            width: 100%; padding: 15px 5%; display: flex; align-items: center; justify-content: space-between;
+            width: 100%; padding: 10px 5%; display: flex; align-items: center; justify-content: space-between;
             background: #000; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000;
         }
 
-        .brand-container { display: flex; flex-direction: column; align-items: center; }
-        .title-main { font-size: 1.4rem; color: var(--gold); letter-spacing: 4px; line-height: 1; }
-        .subtitle-row { display: flex; align-items: center; width: 100%; margin: 2px 0; }
-        .line { flex: 1; height: 1px; background: linear-gradient(to right, rgba(204,164,100,0), rgba(204,164,100,0.45), rgba(204,164,100,0)); }
-        .title-sub { font-size: 0.6rem; color: var(--wine-red); padding: 0 5px; letter-spacing: 3px; text-transform: uppercase; }
-        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 5px; text-transform: uppercase; margin-top: 1px; }
+        /* Logo compacto */
+        .brand-container { display: flex; flex-direction: column; }
+        .title-main { font-size: 1.1rem; color: var(--gold); letter-spacing: 4px; line-height: 1; }
+        .title-sub { font-size: 0.5rem; color: var(--wine-red); letter-spacing: 3px; text-transform: uppercase; }
 
         .nav-center { display: flex; gap: 20px; }
         .nav-center a { color: #fff; text-decoration: none; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
         .nav-center a:hover { color: var(--gold); }
         
         .btn-contact {
-            border: 1px solid var(--gold); padding: 6px 15px; border-radius: 50px;
+            border: 1px solid var(--gold); padding: 5px 12px; border-radius: 50px;
             color: var(--gold); text-decoration: none; font-size: 9px; text-transform: uppercase;
             transition: 0.4s;
         }
         .btn-contact:hover { background: var(--gold); color: black; }
 
-        /* --- NUEVAS SECCIONES --- */
+        /* --- SECCIONES Y BOTONES ORIGINALES --- */
         section { min-height: 80vh; padding: 80px 5%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         h2 { color: var(--gold); margin-bottom: 40px; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 3px; }
 
-        .model-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; width: 100%; max-width: 900px; }
-        .model-card { background: #0a0a0a; border: 1px solid var(--gold); padding: 10px; border-radius: 15px; text-align: center; }
-        .model-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; }
-        
-        .services-content { max-width: 600px; text-align: center; }
-        .service-item { margin-bottom: 30px; }
-        .service-item h3 { color: var(--gold); margin-bottom: 10px; }
-
-        /* Botones sociales originales */
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .btn {
             padding: 15px 30px; background: transparent; color: white; border: 1px solid var(--gold);
             border-radius: 50px; text-transform: uppercase; font-weight: bold; cursor: pointer;
-            transition: 0.4s; text-decoration: none; display: block; text-align: center;
+            transition: 0.4s; text-decoration: none; display: block; text-align: center; width: 250px;
         }
         .btn:hover { background: var(--gold); color: black; animation: bounce 0.6s ease infinite; }
-        .btn-stack { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 300px; }
+        .btn-stack { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+
+        /* Modelos y Servicios */
+        .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; max-width: 800px; }
+        .model-card { border: 1px solid var(--gold); padding: 8px; border-radius: 10px; text-align: center; }
+        .model-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 8px; }
+        .services-content { max-width: 500px; text-align: center; }
     </style>
 </head>
 <body>
@@ -64,12 +59,7 @@
     <nav>
         <div class="brand-container">
             <h1 class="title-main">STARFRUIT</h1>
-            <div class="subtitle-row">
-                <span class="line"></span>
-                <h2 class="title-sub">SEDUCTION</h2>
-                <span class="line"></span>
-            </div>
-            <h3 class="title-badge">AGENCY</h3>
+            <h2 class="title-sub">SEDUCTION AGENCY</h2>
         </div>
         
         <div class="nav-center">
@@ -92,9 +82,9 @@
     <section id="modelos">
         <h2>NUESTRAS MODELOS</h2>
         <div class="model-grid">
-            <div class="model-card"><img src="foto1.jpg" alt="Modelo"><h3>NOMBRE</h3><p>@usuario</p></div>
-            <div class="model-card"><img src="foto2.jpg" alt="Modelo"><h3>NOMBRE</h3><p>@usuario</p></div>
-            <div class="model-card"><img src="foto3.jpg" alt="Modelo"><h3>NOMBRE</h3><p>@usuario</p></div>
+            <div class="model-card"><img src="foto1.jpg" alt="Modelo"><h3>NOMBRE</h3></div>
+            <div class="model-card"><img src="foto2.jpg" alt="Modelo"><h3>NOMBRE</h3></div>
+            <div class="model-card"><img src="foto3.jpg" alt="Modelo"><h3>NOMBRE</h3></div>
         </div>
     </section>
 
@@ -103,11 +93,11 @@
         <div class="services-content">
             <div class="service-item">
                 <h3>Gestión de Agencia</h3>
-                <p>Nos especializamos en potenciar el crecimiento y profesionalismo de nuestras modelos en diversas plataformas.</p>
+                <p>Optimizamos tu presencia profesional.</p>
             </div>
             <div class="service-item">
-                <h3>Marketing y Posicionamiento</h3>
-                <p>Estrategias personalizadas para maximizar el alcance y la audiencia de tu marca personal.</p>
+                <h3>Marketing</h3>
+                <p>Estrategias para tu marca personal.</p>
             </div>
         </div>
     </section>
