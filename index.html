@@ -14,53 +14,46 @@
             background-color: #000000;
             color: #fff;
             min-height: 100vh;
-            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: 'Cinzel', serif;
+            padding: 20px;
+        }
+
+        /* Contenedor principal que agrupa todo en el centro */
+        .main-wrapper {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 320px;
         }
 
-        /* Botón contacto arriba derecha */
-        .top-contact {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-        }
-
-        .btn-contact-top {
-            border: 1px solid #cca464; padding: 8px 20px; border-radius: 50px; 
-            color: #cca464; text-decoration: none; font-size: 0.7rem; letter-spacing: 2px;
-            text-transform: uppercase; transition: 0.3s;
-        }
-        .btn-contact-top:hover { background: #cca464; color: black; }
-
-        /* Contenedor alineado a la izquierda */
+        /* --- LOGO (Nombre de la agencia) --- */
         .logo-text-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            max-width: 300px;
+            align-items: center;
+            margin-bottom: 40px; /* Espacio entre el logo y los botones */
         }
 
         .title-starfruit { font-size: 1.8rem; font-weight: 500; color: #cca464; letter-spacing: 4px; margin-bottom: 6px; }
         
-        .row-with-lines { display: flex; align-items: center; justify-content: flex-start; width: 100%; margin: 3px 0; }
-        .line-left, .line-right { width: 25px; height: 1px; }
-        .line-left { background: linear-gradient(to left, rgba(204,164,100,0.5), rgba(204,164,100,0)); margin-right: 10px; }
-        .line-right { background: linear-gradient(to right, rgba(204,164,100,0.5), rgba(204,164,100,0)); margin-left: 10px; }
+        .row-with-lines { display: flex; align-items: center; justify-content: center; width: 100%; margin: 3px 0; }
+        .line-left, .line-right { width: 25px; height: 1px; background: rgba(204,164,100,0.5); }
+        .line-left { margin-right: 10px; }
+        .line-right { margin-left: 10px; }
 
         .text-seduction { font-size: 0.7rem; font-weight: 600; color: #8a1212; letter-spacing: 3px; }
         .text-agency { font-family: 'Montserrat', sans-serif; font-size: 0.55rem; font-weight: 400; color: #b3b3b3; letter-spacing: 5px; }
 
-        /* Contenedor de botones alineado a la derecha y abajo */
+        /* --- BOTONES --- */
         .interaction-container {
-            margin-top: auto; /* Empuja los botones hacia abajo */
-            align-self: flex-end; /* Alinea los botones a la derecha */
             display: flex;
             flex-direction: column;
             gap: 15px;
             width: 100%;
-            max-width: 280px;
         }
 
         .btn { 
@@ -76,30 +69,28 @@
 </head>
 <body>
 
-    <div class="top-contact">
-        <a href="mailto:contacto@starfruitseduction.com" class="btn-contact-top">Contacto</a>
-    </div>
-
-    <div class="logo-text-container">
-        <h1 class="title-starfruit">STARFRUIT</h1>
-        
-        <div class="row-with-lines">
-            <span class="line-left"></span>
-            <span class="text-seduction">SEDUCTION</span>
-            <span class="line-right"></span>
+    <div class="main-wrapper">
+        <!-- Bloque del Nombre de la Agencia -->
+        <div class="logo-text-container">
+            <h1 class="title-starfruit">STARFRUIT</h1>
+            <div class="row-with-lines">
+                <span class="line-left"></span>
+                <span class="text-seduction">SEDUCTION</span>
+                <span class="line-right"></span>
+            </div>
+            <div class="row-with-lines">
+                <span class="line-left"></span>
+                <span class="text-agency">AGENCY</span>
+                <span class="line-right"></span>
+            </div>
         </div>
-        
-        <div class="row-with-lines">
-            <span class="line-left"></span>
-            <span class="text-agency">AGENCY</span>
-            <span class="line-right"></span>
-        </div>
-    </div>
 
-    <div class="interaction-container">
-        <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
-        <a href="https://www.instagram.com/starfruitseduction/" class="btn">Instagram</a>
-        <a href="https://x.com/" class="btn">X</a>
+        <!-- Botones debajo del nombre -->
+        <div class="interaction-container">
+            <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
+            <a href="https://www.instagram.com/starfruitseduction/" class="btn">Instagram</a>
+            <a href="https://x.com/" class="btn">X</a>
+        </div>
     </div>
 
 </body>
