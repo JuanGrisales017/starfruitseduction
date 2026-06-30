@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,28 +12,35 @@
             --text-white: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: var(--bg-color); color: var(--text-white); font-family: 'Inter', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-white); 
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at center, #1a0a1a 0%, #050505 80%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        /* Navbar fija */
-        nav { position: fixed; top: 0; width: 100%; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(5,5,5,0.9); z-index: 1000; border-bottom: 1px solid #222; }
-        .logo { font-weight: bold; font-size: 20px; letter-spacing: 3px; color: var(--accent-gold); }
-        .menu { display: flex; gap: 20px; }
-        .menu a { color: #ccc; text-decoration: none; font-size: 12px; text-transform: uppercase; }
+        /* Navbar Interactiva */
+        nav { width: 100%; padding: 25px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: bold; font-size: 22px; letter-spacing: 3px; color: var(--accent-gold); }
+        .menu { display: flex; gap: 25px; font-size: 12px; text-transform: uppercase; }
+        .menu a { color: #888; text-decoration: none; transition: 0.3s; }
         .menu a:hover { color: var(--accent-gold); }
 
-        /* Secciones generales */
-        section { padding: 100px 5%; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
-        h2 { font-size: 40px; margin-bottom: 30px; color: var(--accent-gold); }
-        p { font-size: 16px; line-height: 1.6; color: #aaa; margin-bottom: 20px; max-width: 800px; }
-
         /* Hero */
-        .hero { text-align: center; align-items: center; }
-        h1 { font-size: 70px; margin-bottom: 20px; }
-        
-        /* Grid de tarjetas para Modelos/Servicios */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: #111; padding: 30px; border-radius: 10px; border: 1px solid #222; }
+        .hero { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .hero p.meta { color: var(--accent-gold); margin-bottom: 15px; letter-spacing: 3px; font-size: 12px; }
+        .hero h1 { font-size: 70px; text-transform: uppercase; margin-bottom: 15px; color: white; letter-spacing: 2px; }
+        .hero p.tagline { color: #ccc; margin-bottom: 50px; font-size: 18px; font-style: italic; }
+
+        /* Grid de Botones */
+        .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 600px; }
+        .main-btn { padding: 15px 30px; border: 1px solid #333; border-radius: 8px; color: white; text-decoration: none; font-size: 14px; text-transform: uppercase; transition: 0.3s; text-align: center; }
+        .main-btn:hover { border-color: var(--accent-gold); background: rgba(197, 160, 89, 0.1); }
     </style>
 </head>
 <body>
@@ -40,47 +48,24 @@
     <nav>
         <div class="logo">STARFRUIT SEDUCTION</div>
         <div class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#como-trabajamos">Cómo trabajamos</a>
-            <a href="#servicios">Qué hacemos</a>
-            <a href="#modelos">Modelos</a>
-            <a href="#contacto">Contacto</a>
+            <a href="https://www.instagram.com/starfruitseduction/?__pwa=1" target="_blank">Instagram</a>
+            <a href="https://t.me/starfruitseduction" target="_blank">Telegram</a>
+            <a href="mailto:starfruitseduction@starfruitseduction.com">Contacto</a>
         </div>
     </nav>
 
-    <section id="inicio" class="hero">
+    <main class="hero">
+        <p class="meta">PREMIUM CREATOR • EST. 2026</p>
         <h1>STARFRUIT SEDUCTION</h1>
-        <p>Premium Creator Agency • Est. 2026</p>
-        <p>Elevando la exclusividad y la estrategia a un nivel de perfección inigualable.</p>
-    </section>
+        <p class="tagline">Elevando la exclusividad y la estrategia<br>a un nivel de perfección inigualable.</p>
 
-    <section id="como-trabajamos">
-        <h2>Cómo trabajamos</h2>
-        <p>En Starfruit Seduction, nuestra metodología se basa en la transparencia y la optimización de ingresos. Asignamos un equipo dedicado a cada creadora, garantizando atención 24/7 en chats, gestión de redes sociales y estrategias de marketing personalizadas.</p>
-    </section>
-
-    <section id="servicios">
-        <h2>Qué hacemos</h2>
-        <div class="grid">
-            <div class="card"><h3>Gestión de Chats</h3><p>Conversión de fans y fidelización con un equipo profesional.</p></div>
-            <div class="card"><h3>Marketing Viral</h3><p>Estrategias para atraer tráfico masivo desde redes sociales.</p></div>
-            <div class="card"><h3>Producción de Contenido</h3><p>Guionización y edición de alto impacto para OnlyFans.</p></div>
+        <div class="btn-grid">
+            <a href="https://t.me/starfruitseduction" target="_blank" class="main-btn">Telegram</a>
+            <a href="https://x.com/" target="_blank" class="main-btn">Twitter (X)</a>
+            <a href="mailto:starfruitseduction@starfruitseduction.com" class="main-btn">Email Contact</a>
+            <a href="https://www.instagram.com/starfruitseduction/?__pwa=1" target="_blank" class="main-btn">Instagram</a>
         </div>
-    </section>
-
-    <section id="modelos">
-        <h2>Nuestras Modelos</h2>
-        <div class="grid">
-            <div class="card"><h3>Modelo Top 1</h3><p>Especialista en contenido lifestyle y monetización.</p></div>
-            <div class="card"><h3>Modelo Top 2</h3><p>Expertas en engagement y creación de comunidad.</p></div>
-        </div>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Lista para llevar tu marca al siguiente nivel?</p>
-        <a href="mailto:starfruitseduction@starfruitseduction.com" style="color: var(--accent-gold);">Enviar Email</a>
-    </section>
+    </main>
 
 </body>
 </html>
