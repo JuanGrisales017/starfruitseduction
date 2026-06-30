@@ -37,9 +37,16 @@
         .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.55rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; margin-top: 2px; }
 
         /* --- BOTONES Y ENLACES --- */
-        .nav-links { display: flex; gap: 20px; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: #fff; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
         
+        /* Botón de contacto específico en el nav */
+        .btn-contact {
+            border: 1px solid var(--gold); padding: 8px 15px; border-radius: 50px;
+            color: var(--gold) !important; transition: 0.4s;
+        }
+        .btn-contact:hover { background: var(--gold); color: black !important; }
+
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -47,7 +54,6 @@
 
         .btn {
             padding: 15px 30px; background: transparent; color: white; border: 1px solid var(--gold);
-            /* Cambiado solo esto para redondear */
             border-radius: 50px; 
             text-transform: uppercase; font-weight: bold; cursor: pointer;
             transition: 0.4s; text-decoration: none; display: block; text-align: center;
@@ -74,6 +80,8 @@
         <div class="nav-links">
             <a href="#inicio">INICIO</a>
             <a href="#servicios">SERVICIOS</a>
+            <!-- Botón de contacto añadido a la derecha -->
+            <a href="#contacto" class="btn-contact">CONTACTO</a>
         </div>
     </nav>
 
