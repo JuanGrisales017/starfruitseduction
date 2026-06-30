@@ -12,15 +12,17 @@
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { background: #000; color: white; font-family: 'Cinzel', serif; overflow-x: hidden; }
 
-        /* --- NAV TRANSPARENTE (GLASS EFFECT) --- */
+        /* --- NAV INVISIBLE (Efecto Glass) --- */
         nav { 
             width: 100%; padding: 20px 5%; display: flex; align-items: center; justify-content: space-between;
             position: fixed; top: 0; z-index: 1000;
-            background: rgba(0, 0, 0, 0.3); /* Transparencia */
-            backdrop-filter: blur(10px); /* Efecto cristal */
-            border-bottom: 1px solid rgba(204, 164, 100, 0.2);
+            background: rgba(255, 255, 255, 0.02); /* Fondo casi nulo */
+            backdrop-filter: blur(15px); /* Desenfoque intenso */
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Borde apenas visible */
         }
 
+        /* --- LOGO COMPACTO --- */
         .brand-container { display: flex; flex-direction: column; align-items: center; gap: 0px; line-height: 1; width: 180px; }
         .title-main { font-size: 1.5rem; color: var(--gold); letter-spacing: 6px; }
         .subtitle-row { display: flex; align-items: center; justify-content: center; width: 100%; margin: 2px 0; }
@@ -28,9 +30,9 @@
         .title-sub { font-size: 0.6rem; color: var(--wine-red); letter-spacing: 4px; text-transform: uppercase; }
         .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; margin-top: -2px; }
 
+        /* --- ENLACES Y CONTACTO --- */
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: #fff; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
-        
         .btn-contact {
             border: 1px solid var(--gold); padding: 8px 18px; border-radius: 50px;
             color: var(--gold); text-decoration: none; font-size: 9px; text-transform: uppercase;
@@ -38,13 +40,14 @@
         }
         .btn-contact:hover { background: var(--gold); color: black; }
 
-        /* --- SECCIÓN INICIO CON IMAGEN --- */
+        /* --- SECCIÓN INICIO CON FONDO --- */
         #inicio {
             min-height: 100vh;
             width: 100%;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('fondo-inicio.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             display: flex;
             flex-direction: column;
             justify-content: center;
