@@ -19,48 +19,31 @@
             overflow-x: hidden;
         }
 
-        /* Navbar estilo image.png con toque Neón */
+        /* Navbar */
         nav { 
-            width: 100%; 
-            padding: 20px 5%; 
-            display: flex; 
-            align-items: center; 
-            background: rgba(0,0,0,0.9); 
-            border-bottom: 1px solid var(--neon-pink);
-            position: sticky; 
-            top: 0; 
-            z-index: 1000;
+            width: 100%; padding: 20px 5%; display: flex; align-items: center; 
+            background: rgba(0,0,0,0.9); border-bottom: 1px solid var(--neon-pink);
+            position: sticky; top: 0; z-index: 1000;
         }
         .logo-text { font-size: 24px; letter-spacing: 4px; color: white; text-transform: uppercase; font-weight: bold; margin-right: auto; text-shadow: 0 0 10px var(--neon-pink); }
-        
         .nav-links { display: flex; gap: 30px; align-items: center; }
         .nav-links a { color: #ccc; text-decoration: none; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .nav-links a:hover { color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
         
-        /* Botón Contáctanos Neón */
         .btn-contact { border: 1px solid var(--neon-blue); padding: 8px 20px; border-radius: 50px; color: var(--neon-blue) !important; transition: 0.3s; }
         .btn-contact:hover { background: var(--neon-blue); color: black !important; box-shadow: 0 0 15px var(--neon-blue); }
 
-        /* Botones principales redondeados y neón */
-        .btn {
-            padding: 18px 40px;
-            background: transparent;
-            color: white;
-            border: 2px solid var(--neon-pink);
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.4s;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(255,0,255,0.2);
-        }
-        .btn:hover { background: var(--neon-pink); box-shadow: 0 0 25px var(--neon-pink); transform: scale(1.05); }
-
+        /* Estilos generales */
         section { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px; text-align: center; }
         h1 { font-size: 70px; text-transform: uppercase; background: linear-gradient(to right, var(--neon-pink), var(--neon-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 40px; }
+        
+        /* Botones */
+        .btn {
+            padding: 18px 40px; background: transparent; color: white; border: 2px solid var(--neon-pink);
+            border-radius: 50px; text-transform: uppercase; font-weight: bold; cursor: pointer;
+            transition: 0.4s; text-decoration: none; display: block; text-align: center;
+        }
+        .btn:hover { background: var(--neon-pink); box-shadow: 0 0 25px var(--neon-pink); transform: scale(1.05); }
         .btn-stack { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 350px; }
     </style>
 </head>
@@ -85,7 +68,29 @@
         </div>
     </section>
 
-    <div style="text-align: center; padding: 20px; color: #666; font-size: 12px; letter-spacing: 2px;">PREMIUM CREATOR • EST. 2026</div>
+    <!-- Nueva sección FAQ -->
+    <section id="faq" style="min-height: auto; padding: 80px 20px;">
+        <h2 style="color: var(--neon-gold); margin-bottom: 40px; font-size: 35px;">Preguntas Frecuentes</h2>
+        <div style="max-width: 600px; text-align: left;">
+            <details style="margin-bottom: 20px; padding: 20px; border: 1px solid var(--neon-pink); border-radius: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; color: var(--neon-blue);">¿Cómo garantizan mi privacidad?</summary>
+                <p style="margin-top: 10px; font-size: 14px; color: #ccc;">Operamos bajo estrictos protocolos de confidencialidad y acuerdos de no divulgación para proteger tu identidad y contenido[span_1](start_span)[span_1](end_span).</p>
+            </details>
+            <details style="margin-bottom: 20px; padding: 20px; border: 1px solid var(--neon-pink); border-radius: 15px; cursor: pointer;">
+                <summary style="font-weight: bold; color: var(--neon-blue);">¿Qué servicios incluyen?</summary>
+                <p style="margin-top: 10px; font-size: 14px; color: #ccc;">Ofrecemos gestión integral: optimización de perfiles, marketing viral, gestión de chats 24/7 y estrategia de monetización[span_2](start_span)[span_2](end_span).</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer Profesional -->
+    <footer style="padding: 40px; text-align: center; border-top: 1px solid #222; background: #000;">
+        <div style="margin-bottom: 10px;">
+            <a href="#" style="color: #666; font-size: 12px; margin: 0 10px; text-decoration: none;">Términos y Condiciones</a>
+            <a href="#" style="color: #666; font-size: 12px; margin: 0 10px; text-decoration: none;">Política de Privacidad</a>
+        </div>
+        <p style="color: #444; font-size: 11px;">© 2026 Starfruit Seduction Agency. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
