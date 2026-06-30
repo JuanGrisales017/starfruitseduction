@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,63 +13,62 @@
             --neon-gold: #ffcc00;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { 
             background: radial-gradient(circle at center, #1a0a1a 0%, #050505 100%);
             color: white; 
             font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             overflow-x: hidden;
         }
 
-        /* Animación de entrada */
+        /* Animaciones */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .animate { animation: fadeIn 1s ease-out; }
 
-        nav { width: 100%; padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; }
+        nav { width: 100%; padding: 30px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: rgba(5,5,5,0.8); z-index: 1000; }
         .logo { font-size: 24px; font-weight: 800; letter-spacing: 4px; color: white; text-transform: uppercase; }
-        .menu a { color: white; margin-left: 20px; text-decoration: none; font-size: 14px; transition: 0.3s; }
-        .menu a:hover { color: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink); }
+        
+        section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px; text-align: center; }
+        h2 { font-size: 50px; margin-bottom: 30px; color: var(--neon-blue); }
+        p { font-size: 18px; color: #ccc; max-width: 600px; line-height: 1.6; }
 
-        .hero { margin-top: 100px; text-align: center; }
-        h1 { font-size: 80px; text-transform: uppercase; background: linear-gradient(to right, var(--neon-pink), var(--neon-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
-        /* Botones Animados */
-        .btn-grid { margin-top: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .btn { padding: 20px 40px; border: none; border-radius: 50px; color: black; font-weight: bold; text-transform: uppercase; cursor: pointer; transition: 0.4s; transform: scale(1); box-shadow: 0 0 15px rgba(255,255,255,0.2); text-decoration: none; display: block; }
-        .btn:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(255,255,255,0.5); }
+        /* Botones en columna */
+        .btn-stack { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 400px; margin-top: 30px; }
+        .btn { padding: 18px; border: none; border-radius: 12px; color: black; font-weight: bold; text-transform: uppercase; cursor: pointer; transition: 0.4s; text-decoration: none; text-align: center; }
+        .btn:hover { transform: scale(1.05); }
         
         .btn-insta { background: var(--neon-pink); }
         .btn-tele { background: var(--neon-blue); }
         .btn-mail { background: white; }
-        .btn-twit { background: var(--neon-gold); }
+        .btn-x { background: var(--neon-gold); }
     </style>
 </head>
 <body>
 
-    <nav class="animate">
+    <nav>
         <div class="logo">STARFRUIT</div>
-        <div class="menu">
-            <a href="https://www.instagram.com/starfruitseduction/?__pwa=1">Instagram</a>
-            <a href="https://t.me/starfruitseduction">Telegram</a>
-            <a href="mailto:starfruitseduction@starfruitseduction.com">Contacto</a>
+        <div style="display: flex; gap: 20px;">
+            <a href="#inicio" style="color: white; text-decoration: none;">Inicio</a>
+            <a href="#agencia" style="color: white; text-decoration: none;">La Agencia</a>
         </div>
     </nav>
 
-    <main class="hero animate">
+    <section id="inicio" class="animate">
         <h1>STARFRUIT SEDUCTION</h1>
-        <p style="font-size: 20px; color: #888; margin-bottom: 30px;">PREMIUM CREATOR • EST. 2026</p>
-        
-        <div class="btn-grid">
-            <a href="https://t.me/starfruitseduction" target="_blank" class="btn btn-tele">Telegram</a>
-            <a href="https://x.com/" target="_blank" class="btn btn-twit">Twitter (X)</a>
-            <a href="mailto:starfruitseduction@starfruitseduction.com" class="btn btn-mail">Email Contact</a>
-            <a href="https://www.instagram.com/starfruitseduction/?__pwa=1" target="_blank" class="btn btn-insta">Instagram</a>
+        <div class="btn-stack">
+            <a href="https://t.me/starfruitseduction" class="btn btn-tele">Telegram</a>
+            <a href="https://x.com/" class="btn btn-x">X</a>
+            <a href="mailto:starfruitseduction@starfruitseduction.com" class="btn btn-mail">Contacto</a>
         </div>
-    </main>
+    </section>
+
+    <section id="agencia" class="animate">
+        <h2>¿Qué hace nuestra agencia?</h2>
+        <p>En Starfruit Seduction, transformamos el potencial de los creadores en marcas de alto impacto.</p>
+        <p style="margin-top: 20px;">Nos encargamos de la gestión estratégica, optimización de perfiles, marketing viral y monetización avanzada, permitiéndote concentrarte exclusivamente en crear el mejor contenido.</p>
+    </section>
+
+    <div style="text-align: center; padding: 20px; font-size: 12px; color: #666;">PREMIUM CREATOR • EST. 2026</div>
 
 </body>
 </html>
