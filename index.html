@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starfruit Seduction | Agencia</title>
+    <title>Starfruit Seduction Agency</title>
     <style>
         :root {
             --bg-dark: #0a0a0a;
@@ -17,42 +17,45 @@
 
         /* Header */
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #222; }
-        .logo { font-size: 20px; letter-spacing: 3px; font-weight: bold; color: var(--gold); text-transform: uppercase; }
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .star-icon { color: var(--gold); font-size: 24px; }
+        .logo-text { font-size: 18px; letter-spacing: 2px; font-weight: bold; color: var(--text-white); text-transform: uppercase; line-height: 1.2; }
+        .logo-sub { font-size: 10px; letter-spacing: 5px; color: var(--text-muted); display: block; }
+        
+        nav { display: flex; align-items: center; }
         nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-btn { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold) !important; }
+        .contact-btn { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold) !important; transition: 0.3s; }
+        .contact-btn:hover { background: var(--gold); color: white !important; }
 
         /* Hero */
-        .hero { padding: 80px 5%; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); }
+        .hero { padding: 80px 5%; display: flex; align-items: center; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); }
         .hero-content { max-width: 50%; }
         .subtitle { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-size: 14px; }
         h1 { font-size: 60px; margin-bottom: 20px; line-height: 1.1; }
         .hero-text { color: var(--text-muted); margin-bottom: 30px; line-height: 1.6; }
-        .btn-more { display: inline-block; padding: 15px 30px; border: 1px solid var(--gold); color: white; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* Botones de acción */
+        .cta-container { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 25px; border: 1px solid var(--gold); color: white; text-decoration: none; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; transition: 0.3s; }
+        .btn:hover { background: var(--gold); color: black; }
 
         /* Features */
         .features { display: grid; grid-template-columns: repeat(4, 1fr); padding: 60px 5%; text-align: center; border-bottom: 1px solid #222; }
-        .feature-item h3 { color: var(--gold); margin: 15px 0; }
+        .feature-item h3 { color: var(--gold); margin: 15px 0; font-size: 16px; }
         .feature-item p { font-size: 13px; color: var(--text-muted); }
-
-        /* Section Title */
-        .section-title { text-align: center; padding: 50px 0; font-size: 30px; letter-spacing: 4px; color: var(--gold); }
-
-        /* Models Grid */
-        .models-grid { display: grid; grid-template-columns: repeat(4, 1fr); padding: 0 5% 50px 5%; gap: 20px; }
-        .model-card { height: 400px; background-color: #1a1a1a; display: flex; align-items: center; justify-content: center; color: #444; border: 1px solid #222; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">STARFRUIT SEDUCTION</div>
+        <div class="logo-container">
+            <div class="star-icon">★</div>
+            <div class="logo-text">STARFRUIT<br><span class="logo-sub">SEDUCTION AGENCY</span></div>
+        </div>
         <nav>
             <a href="#">Inicio</a>
-            <a href="#">Acerca de</a>
+            <a href="#">Nosotros</a>
             <a href="#">Modelos</a>
-            <a href="#">Servicios</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Contacto</a>
             <a href="#" class="contact-btn">Contactanos</a>
         </nav>
     </header>
@@ -62,7 +65,13 @@
             <div class="subtitle">Agencia de Modelos</div>
             <h1>BELLEZA QUE INSPIRA</h1>
             <p class="hero-text">Conectamos el talento con las mejores oportunidades. Profesionalismo, elegancia y exclusividad en cada paso que damos.</p>
-            <a href="#" class="btn-more">Conoce más →</a>
+            
+            <div class="cta-container">
+                <a href="#" class="btn">Instagram</a>
+                <a href="#" class="btn">Telegram</a>
+                <a href="mailto:tuemail@ejemplo.com" class="btn">Email</a>
+                <a href="#" class="btn" style="background: var(--gold); color: black;">Ver Modelos</a>
+            </div>
         </div>
     </section>
 
@@ -72,14 +81,6 @@
         <div class="feature-item"><h3>OPORTUNIDADES</h3><p>Conexiones de alto nivel.</p></div>
         <div class="feature-item"><h3>DISCRECIÓN</h3><p>Confidencialidad total.</p></div>
     </section>
-
-    <div class="section-title">NUESTRAS MODELOS</div>
-    <div class="models-grid">
-        <div class="model-card">Modelo 1</div>
-        <div class="model-card">Modelo 2</div>
-        <div class="model-card">Modelo 3</div>
-        <div class="model-card">Modelo 4</div>
-    </div>
 
 </body>
 </html>
