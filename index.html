@@ -18,12 +18,17 @@
             background: #000; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000;
         }
 
-        .brand-container { display: flex; flex-direction: column; align-items: center; }
+        /* --- LOGO CENTRADO (CORREGIDO) --- */
+        .brand-container { display: flex; flex-direction: column; align-items: center; width: 180px; }
         .title-main { font-size: 1.4rem; color: var(--gold); letter-spacing: 4px; line-height: 1; }
-        .subtitle-row { display: flex; align-items: center; width: 100%; margin: 2px 0; }
-        .line { flex: 1; height: 1px; background: linear-gradient(to right, rgba(204,164,100,0), rgba(204,164,100,0.45), rgba(204,164,100,0)); }
-        .title-sub { font-size: 0.6rem; color: var(--wine-red); padding: 0 5px; letter-spacing: 3px; text-transform: uppercase; }
-        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 5px; text-transform: uppercase; margin-top: 1px; }
+        
+        /* Contenedor de la línea con el texto SEDUCTION */
+        .subtitle-row { display: flex; align-items: center; justify-content: center; width: 100%; margin: 2px 0; }
+        .line { width: 30px; height: 1px; background: var(--gold); margin: 0 5px; }
+        .title-sub { font-size: 0.6rem; color: var(--wine-red); letter-spacing: 3px; text-transform: uppercase; }
+        
+        /* Texto AGENCY centrado perfectamente */
+        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 5px; text-transform: uppercase; margin-top: 1px; text-align: center; width: 100%; }
 
         .nav-center { display: flex; gap: 20px; }
         .nav-center a { color: #fff; text-decoration: none; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
@@ -81,6 +86,7 @@
         <a href="mailto:spaceemail@example.com" class="btn-contact">CONTACTO</a>
     </nav>
 
+    <!-- Resto del contenido sigue igual -->
     <section id="inicio">
         <div class="btn-stack">
             <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
