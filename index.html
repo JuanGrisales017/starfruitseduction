@@ -3,320 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starfruit Seduction | OFM Agency</title>
+    <title>Starfruit Seduction | Agencia</title>
     <style>
         :root {
-            --bg-color: #000000;
-            --card-bg: #0a0a0c;
-            --accent-neon: #ff0055;
-            --accent-purple: #8a2be2;
-            --accent-telegram: #0088cc;
-            --accent-instagram: #e1306c;
-            --text-main: #ffffff;
-            --text-muted: #a0a0a5;
+            --bg-dark: #0a0a0a;
+            --gold: #c5a059;
+            --text-white: #ffffff;
+            --text-muted: #b0b0b0;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-dark); color: var(--text-white); font-family: 'Times New Roman', serif; }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid #222; }
+        .logo { font-size: 20px; letter-spacing: 3px; font-weight: bold; color: var(--gold); text-transform: uppercase; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-btn { border: 1px solid var(--gold); padding: 10px 20px; color: var(--gold) !important; }
 
-        /* Fondo con destellos de luz de neón */
-        .neon-glow {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255,0,85,0.15) 0%, rgba(0,0,0,0) 70%);
-            top: 10%;
-            right: -5%;
-            z-index: 0;
-            pointer-events: none;
-        }
+        /* Hero */
+        .hero { padding: 80px 5%; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); }
+        .hero-content { max-width: 50%; }
+        .subtitle { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; font-size: 14px; }
+        h1 { font-size: 60px; margin-bottom: 20px; line-height: 1.1; }
+        .hero-text { color: var(--text-muted); margin-bottom: 30px; line-height: 1.6; }
+        .btn-more { display: inline-block; padding: 15px 30px; border: 1px solid var(--gold); color: white; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
 
-        .neon-glow-2 {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(138,43,226,0.12) 0%, rgba(0,0,0,0) 70%);
-            top: 50%;
-            left: -10%;
-            z-index: 0;
-            pointer-events: none;
-        }
+        /* Features */
+        .features { display: grid; grid-template-columns: repeat(4, 1fr); padding: 60px 5%; text-align: center; border-bottom: 1px solid #222; }
+        .feature-item h3 { color: var(--gold); margin: 15px 0; }
+        .feature-item p { font-size: 13px; color: var(--text-muted); }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 5%;
-            position: relative;
-            z-index: 10;
-        }
+        /* Section Title */
+        .section-title { text-align: center; padding: 50px 0; font-size: 30px; letter-spacing: 4px; color: var(--gold); }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #ffffff, var(--accent-neon));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent-neon);
-            text-shadow: 0 0 10px var(--accent-neon);
-        }
-
-        /* Sección Principal */
-        .hero {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 5%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .hero h1 span {
-            color: var(--accent-neon);
-            text-shadow: 0 0 20px rgba(255, 0, 85, 0.6);
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
-
-        .btn-main {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(45deg, var(--accent-neon), var(--accent-purple));
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            box-shadow: 0 0 25px rgba(255, 0, 85, 0.4);
-            transition: 0.3s transform, 0.3s box-shadow;
-        }
-
-        .btn-main:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 35px rgba(255, 0, 85, 0.7);
-        }
-
-        /* Secciones/Grid de Beneficios OFM */
-        .services {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid #151518;
-            padding: 40px 30px;
-            border-radius: 20px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-color: var(--accent-neon);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 0, 85, 0.1);
-        }
-
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: white;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        /* Sección de Canales y Contacto Directo */
-        .contact-section {
-            max-width: 700px;
-            margin: 80px auto;
-            padding: 0 5%;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-        }
-
-        .contact-section h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .contact-container {
-            background-color: var(--card-bg);
-            padding: 40px 30px;
-            border-radius: 20px;
-            border: 1px solid #151518;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .btn-channel {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            padding: 16px;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            box-shadow: 0 0 20px rgba(220, 39, 67, 0.3);
-        }
-
-        .btn-instagram:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 30px rgba(220, 39, 67, 0.6);
-        }
-
-        .btn-telegram {
-            background: linear-gradient(135deg, #2aabee, #229ed9);
-            box-shadow: 0 0 20px rgba(34, 158, 217, 0.3);
-        }
-
-        .btn-telegram:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 30px rgba(34, 158, 217, 0.6);
-        }
-
-        .btn-contact {
-            background: linear-gradient(45deg, var(--accent-neon), var(--accent-purple));
-            box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
-        }
-
-        .btn-contact:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 30px rgba(255, 0, 85, 0.6);
-        }
-
-        .btn-channel svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #404045;
-            font-size: 12px;
-            border-top: 1px solid #101012;
-        }
+        /* Models Grid */
+        .models-grid { display: grid; grid-template-columns: repeat(4, 1fr); padding: 0 5% 50px 5%; gap: 20px; }
+        .model-card { height: 400px; background-color: #1a1a1a; display: flex; align-items: center; justify-content: center; color: #444; border: 1px solid #222; }
     </style>
 </head>
 <body>
 
-    <div class="neon-glow"></div>
-    <div class="neon-glow-2"></div>
-
     <header>
         <div class="logo">STARFRUIT SEDUCTION</div>
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#beneficios">Beneficios</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Modelos</a>
+            <a href="#">Servicios</a>
+            <a href="#">Portafolio</a>
+            <a href="#">Contacto</a>
+            <a href="#" class="contact-btn">Contactanos</a>
         </nav>
     </header>
 
-    <section class="hero" id="inicio">
-        <h1>Maximiza Tus Ingresos.<br><span>Domina Tu Contenido.</span></h1>
-        <p>Llevamos tu perfil de creador al siguiente nivel. Gestión profesional de cuentas, estrategias de marketing exclusivas y crecimiento garantizado con total discreción.</p>
-        <a href="#contacto" class="btn-main">Hablemos Ahora</a>
-    </section>
-
-    <section class="services" id="beneficios">
-        <div class="card">
-            <h3>Gestión 24/7</h3>
-            <p>Nos encargamos de tus chats, ventas y retención de fans mientras tú te concentras únicamente en crear el mejor contenido.</p>
-        </div>
-        <div class="card">
-            <h3>Marketing Viral</h3>
-            <p>Estrategias avanzadas en TikTok, Instagram y Reddit para atraer oleadas de suscriptores de alto valor todos los días.</p>
-        </div>
-        <div class="card">
-            <h3>Privacidad Absoluta</h3>
-            <p>Protección total de tu identidad mediante geobloqueos avanzados y un manejo de datos cien por ciento confidencial.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="subtitle">Agencia de Modelos</div>
+            <h1>BELLEZA QUE INSPIRA</h1>
+            <p class="hero-text">Conectamos el talento con las mejores oportunidades. Profesionalismo, elegancia y exclusividad en cada paso que damos.</p>
+            <a href="#" class="btn-more">Conoce más →</a>
         </div>
     </section>
 
-    <section class="contact-section" id="contacto">
-        <h2>Conéctate con Nosotros</h2>
-        <p style="color: var(--text-muted); margin-bottom: 25px;">Elige tu plataforma preferida y habla directamente con nuestro equipo ejecutivo.</p>
-        
-        <div class="contact-container">
-            <!-- Botón de Instagram -->
-            <a href="https://www.instagram.com/starfruitseduction/?__pwa=1" target="_blank" class="btn-channel btn-instagram">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                Síguenos en Instagram
-            </a>
-
-            <!-- Botón de Telegram -->
-            <a href="https://t.me/starfruitseduction" target="_blank" class="btn-channel btn-telegram">
-                <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.822 1.231-.7.067-1.231-.459-1.908-.903-1.059-.696-1.658-1.13-2.686-1.808-1.189-.784-.417-1.216.26-1.911.177-.181 3.25-2.981 3.31-3.236.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.491-1.302.482-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14.12.098.154.231.164.327.01.097.014.214.004.305z"/></svg>
-                Canal de Telegram
-            </a>
-
-            <!-- Botón de Contacto Directo -->
-            <a href="https://wa.me/tu_numero" target="_blank" class="btn-channel btn-contact">
-                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.734-1.455L0 24zm6.59-3.32c1.656.983 3.443 1.502 5.353 1.503 5.432 0 9.851-4.422 9.854-9.859.002-2.634-1.02-5.111-2.879-6.972-1.858-1.86-4.332-2.883-6.966-2.884-5.438 0-9.857 4.423-9.86 9.86-.001 1.986.518 3.926 1.503 5.642l-.995 3.641 3.73-.978zm11.567-7.382c-.314-.157-1.86-.918-2.149-1.023-.289-.104-.5-.157-.71.157-.21.314-.814 1.023-.997 1.233-.183.21-.366.236-.68.079-.314-.157-1.328-.49-2.53-1.561-.936-.836-1.568-1.869-1.751-2.184-.183-.314-.02-.485.137-.641.142-.14.314-.367.472-.551.157-.184.21-.314.315-.525.105-.21.052-.394-.026-.551-.079-.157-.71-1.71-.972-2.34-.255-.612-.516-.529-.71-.529-.184-.003-.394-.004-.604-.004-.21 0-.552.079-.841.394-.289.314-1.103 1.077-1.103 2.628 0 1.551 1.129 3.048 1.287 3.258.157.21 2.221 3.391 5.379 4.754.752.325 1.338.52 1.796.665.756.24 1.444.207 1.989.126.608-.09 1.86-.761 2.122-1.458.263-.696.263-1.293.184-1.418-.079-.125-.289-.21-.604-.367z"/></svg>
-                Contactar por WhatsApp
-            </a>
-        </div>
+    <section class="features">
+        <div class="feature-item"><h3>EXCLUSIVIDAD</h3><p>Trabajamos con talento seleccionado.</p></div>
+        <div class="feature-item"><h3>PROFESIONALISMO</h3><p>Formación y acompañamiento.</p></div>
+        <div class="feature-item"><h3>OPORTUNIDADES</h3><p>Conexiones de alto nivel.</p></div>
+        <div class="feature-item"><h3>DISCRECIÓN</h3><p>Confidencialidad total.</p></div>
     </section>
 
-    <footer>
-        &copy; 2026 Starfruit Seduction Agency. Todos los derechos reservados.
-    </footer>
+    <div class="section-title">NUESTRAS MODELOS</div>
+    <div class="models-grid">
+        <div class="model-card">Modelo 1</div>
+        <div class="model-card">Modelo 2</div>
+        <div class="model-card">Modelo 3</div>
+        <div class="model-card">Modelo 4</div>
+    </div>
 
 </body>
 </html>
