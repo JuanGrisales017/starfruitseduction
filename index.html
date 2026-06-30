@@ -12,10 +12,10 @@
         }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #030305;
+            background-color: #0b0a07;
             background-image: 
-                radial-gradient(circle at 90% 10%, rgba(255, 0, 127, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 10% 90%, rgba(0, 255, 255, 0.08) 0%, transparent 40%);
+                radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 10% 90%, rgba(139, 0, 0, 0.04) 0%, transparent 40%);
             background-attachment: fixed;
             color: #ffffff;
             min-height: 100vh;
@@ -37,20 +37,21 @@
         }
         .nav-logo {
             font-weight: 900;
-            font-size: 0.95rem;
-            letter-spacing: 2px;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+            color: #d4af37;
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
         }
         .nav-tag {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #555866;
-            border: 1px solid #222530;
-            padding: 6px 12px;
+            letter-spacing: 2px;
+            color: #8c7853;
+            border: 1px solid #2d281e;
+            padding: 6px 14px;
             border-radius: 20px;
+            background: rgba(11, 10, 7, 0.6);
         }
 
         /* CONTENEDOR PRINCIPAL */
@@ -59,7 +60,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 140px 20px 60px 20px;
+            padding: 150px 20px 60px 20px;
         }
         .container {
             max-width: 650px;
@@ -69,21 +70,24 @@
 
         /* SECCIÓN HERO (TÍTULO) */
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
-            color: #ffffff;
-            text-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+            letter-spacing: 5px;
+            margin-bottom: 8px;
+            color: #d4af37;
+            background: linear-gradient(135deg, #ffeaa7 0%, #d4af37 50%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 900;
+            filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.2));
         }
         .subtitle {
-            font-size: 0.9rem;
-            color: #8e92a6;
-            letter-spacing: 2px;
+            font-size: 0.75rem;
+            color: #890000;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            margin-bottom: 40px;
-            font-weight: bold;
+            margin-bottom: 45px;
+            font-weight: 700;
         }
 
         /* DISTRIBUCIÓN POR FILAS ASIMÉTRICAS */
@@ -100,91 +104,101 @@
         }
 
         .row-single {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         /* TEXTO SEPARADOR MEDIO */
         .divider-text {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #ff007f;
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .divider-subtext {
             font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #666a7a;
-            margin-bottom: 20px;
+            letter-spacing: 3px;
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 4px;
+            opacity: 0.8;
+        }
+        .divider-subtext {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #5c5549;
+            margin-bottom: 25px;
         }
 
         /* ESTILOS DE BOTONES */
         .btn-base {
             display: inline-block;
             text-decoration: none;
-            color: white;
+            color: #ffffff;
             font-weight: bold;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            padding: 16px 30px;
+            padding: 18px 30px;
             border-radius: 50px;
-            letter-spacing: 1.5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
             width: 100%;
             box-sizing: border-box;
         }
         .btn-base:hover {
-            transform: scale(1.02);
+            transform: translateY(-2px);
         }
 
+        /* 1. EXPLORE MODELS */
         .btn-filled-models {
-            background: linear-gradient(90deg, #ff007f, #b34eff);
-            box-shadow: 0 4px 20px rgba(255, 0, 127, 0.4);
+            background: linear-gradient(45deg, #aa7c11, #d4af37, #ffeaa7);
+            color: #0b0a07;
+            font-weight: 800;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
         }
         .btn-filled-models:hover {
-            box-shadow: 0 6px 25px rgba(255, 0, 127, 0.7);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
         }
 
+        /* 2. CONTACT US */
         .btn-dark-contact {
-            background: #111216;
-            border: 1px solid #222530;
+            background: #12110e;
+            border: 1px solid #3a3324;
+            color: #d4af37;
         }
         .btn-dark-contact:hover {
-            background: #16181d;
-            border-color: #44495e;
+            background: #1a1814;
+            border-color: #d4af37;
         }
 
+        /* 3. TELEGRAM */
         .btn-border-telegram {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid #333644;
+            background: rgba(139, 0, 0, 0.05);
+            border: 1px solid #4a0000;
+            color: #ff9e9e;
         }
         .btn-border-telegram:hover {
-            border-color: #0088cc;
-            box-shadow: 0 0 15px rgba(0, 136, 204, 0.3);
+            border-color: #890000;
+            background: rgba(139, 0, 0, 0.15);
+            box-shadow: 0 0 15px rgba(137, 0, 0, 0.3);
         }
 
+        /* 4. INSTAGRAM */
         .btn-neon-instagram {
-            background: #030305;
-            border: 2.5px solid transparent;
+            background: #0b0a07;
+            border: 2px solid transparent;
             background-origin: border-box;
             background-clip: padding-box, border-box;
-            background-image: linear-gradient(#030305, #030305), linear-gradient(45deg, #f09433, #dc2743, #bc1888);
-            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.15);
+            background-image: linear-gradient(#0b0a07, #0b0a07), linear-gradient(45deg, #aa7c11, #ffeaa7, #890000);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
         }
         .btn-neon-instagram:hover {
-            box-shadow: 0 6px 25px rgba(220, 39, 67, 0.5);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3);
         }
 
         footer {
             width: 100%;
             padding: 30px 20px;
             text-align: center;
-            font-size: 0.75rem;
-            color: #414452;
-            letter-spacing: 1px;
-            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            font-size: 0.7rem;
+            color: #474135;
+            letter-spacing: 2px;
+            border-top: 1px solid rgba(212, 175, 55, 0.03);
             margin-top: auto;
         }
     </style>
@@ -193,15 +207,15 @@
 
     <!-- LOGOTIPO SUPERIOR -->
     <header>
-        <div class="nav-logo">★ Starfruit Seduction</div>
-        <div class="nav-tag">OFM Agency</div>
+        <div class="nav-logo">✦ Starfruit Seduction</div>
+        <div class="nav-tag">Boutique Agency</div>
     </header>
 
     <div class="main-content">
         <div class="container">
             
             <h1>STARFRUIT SEDUCTION</h1> 
-            <div class="subtitle">ATTENTION INTO SUBSCRIPTIONS.</div>
+            <div class="subtitle">WE TURN BEAUTY INTO ATTENTION. ATTENTION INTO SUBSCRIPTIONS.</div>
             
             <!-- FILA 1: BOTONES EN PAREJA -->
             <div class="grid-row-2">
@@ -209,7 +223,7 @@
                 <a href="mailto:starfruitseduction@starfruitseduction.com" class="btn-base btn-dark-contact">CONTACT US →</a>
             </div>
             
-            <!-- FILA 2: TELEGRAM CENTRADO -->
+            <!-- FILA 2: TELEGRAM -->
             <div class="row-single">
                 <a href="https://t.me/starfruitseduction" class="btn-base btn-border-telegram">🚀 NEW RELEASES • TELEGRAM →</a>
             </div>
@@ -218,7 +232,7 @@
             <div class="divider-text">STAY CONNECTED</div>
             <div class="divider-subtext">Behind the scenes, updates & more.</div>
             
-            <!-- FILA 4: INSTAGRAM EN GRANDE -->
+            <!-- FILA 4: INSTAGRAM -->
             <div class="row-single">
                 <a href="https://www.instagram.com/starfruitseduction/" class="btn-base btn-neon-instagram">📸 JOIN ON INSTAGRAM →</a>
             </div>
