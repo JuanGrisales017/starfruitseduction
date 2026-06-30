@@ -13,15 +13,12 @@
         body {
             background-color: #000000;
             color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 20px; /* Padding reducido para acercar a la esquina */
             font-family: 'Cinzel', serif;
         }
 
-        /* Botón de contacto arriba a la derecha */
+        /* Botón contacto arriba derecha */
         .top-contact {
             position: absolute;
             top: 20px;
@@ -35,109 +32,75 @@
         }
         .btn-contact-top:hover { background: #cca464; color: black; }
 
-        .top-spacer { flex: 1; }
-
-        /* --- LOGOTIPO --- */
+        /* Contenedor alineado a la izquierda */
         .logo-text-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start; /* Alinea todo a la izquierda */
             width: 100%;
             max-width: 300px;
-            text-align: center;
+            text-align: left;
         }
 
-        .title-starfruit { font-size: 2.1rem; font-weight: 500; color: #cca464; letter-spacing: 6px; line-height: 1; margin-bottom: 6px; }
+        .title-starfruit { font-size: 1.8rem; font-weight: 500; color: #cca464; letter-spacing: 4px; line-height: 1; margin-bottom: 6px; }
         
-        .row-with-lines { display: flex; align-items: center; justify-content: center; width: 100%; margin: 3px 0; }
-        .line-left, .line-right { width: 25px; height: 1px; }
-        .line-left { background: linear-gradient(to left, rgba(204,164,100,0.5), rgba(204,164,100,0)); }
-        .line-right { background: linear-gradient(to right, rgba(204,164,100,0.5), rgba(204,164,100,0)); }
+        .row-with-lines { display: flex; align-items: center; justify-content: flex-start; width: 100%; margin: 2px 0; }
+        .line-right { width: 25px; height: 1px; margin-left: 10px; background: linear-gradient(to right, rgba(204,164,100,0.5), rgba(204,164,100,0)); }
 
-        .text-seduction { font-size: 0.78rem; font-weight: 600; color: #8a1212; padding: 0 10px; letter-spacing: 5px; }
-        .text-agency { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; font-weight: 400; color: #b3b3b3; padding: 0 12px; letter-spacing: 7px; text-indent: 7px; }
+        .text-seduction { font-size: 0.7rem; font-weight: 600; color: #8a1212; letter-spacing: 3px; }
+        .text-agency { font-family: 'Montserrat', sans-serif; font-size: 0.55rem; font-weight: 400; color: #b3b3b3; letter-spacing: 5px; }
 
-        .long-divider { width: 100vw; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.12), rgba(255,255,255,0)); margin-top: 18px; }
-
-        /* --- BOTONES REDONDEADOS --- */
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
+        /* Centrar botones abajo */
         .interaction-container {
-            margin-top: 30px;
+            margin-top: 50px;
             display: flex;
             flex-direction: column;
             gap: 15px;
             align-items: center;
             width: 100%;
             max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn { 
             width: 100%;
-            border: 1px solid #cca464; 
-            padding: 12px 0; 
-            border-radius: 50px; /* Esto hace que sean totalmente redondeados */
-            color: #cca464; 
-            text-decoration: none; 
-            font-size: 0.75rem; 
-            letter-spacing: 2px;
-            text-transform: uppercase; 
-            text-align: center;
+            border: 1px solid #cca464; padding: 12px 0; border-radius: 50px; 
+            color: #cca464; text-decoration: none; font-size: 0.75rem; letter-spacing: 2px;
+            text-transform: uppercase; text-align: center;
             transition: 0.4s;
         }
         
-        .btn:hover { 
-            background: #cca464; color: black; 
-            box-shadow: 0 0 15px #cca464;
-            animation: bounce 0.6s ease infinite; 
-        }
-
-        .bottom-dash { width: 25px; height: 1px; background-color: rgba(255, 255, 255, 0.25); margin-top: 40px; margin-bottom: 20px; }
+        .btn:hover { background: #cca464; color: black; box-shadow: 0 0 15px #cca464; }
 
         @media (min-width: 768px) {
-            .logo-text-container { max-width: 420px; }
-            .line-left, .line-right { width: 45px; }
-            .title-starfruit { font-size: 3.2rem; letter-spacing: 9px; }
+            .logo-text-container { max-width: 400px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Botón de contacto arriba a la derecha -->
     <div class="top-contact">
         <a href="mailto:contacto@starfruitseduction.com" class="btn-contact-top">Contacto</a>
     </div>
 
-    <div class="top-spacer"></div>
-
     <div class="logo-text-container">
         <h1 class="title-starfruit">STARFRUIT</h1>
-        
         <div class="row-with-lines">
-            <span class="line-left"></span>
             <span class="text-seduction">SEDUCTION</span>
             <span class="line-right"></span>
         </div>
-        
         <div class="row-with-lines">
-            <span class="line-left"></span>
             <span class="text-agency">AGENCY</span>
             <span class="line-right"></span>
         </div>
-
-        <div class="long-divider"></div>
-
-        <div class="interaction-container">
-            <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
-            <a href="https://www.instagram.com/starfruitseduction/" class="btn">Instagram</a>
-            <a href="https://x.com/" class="btn">X</a>
-        </div>
     </div>
 
-    <div class="bottom-dash"></div>
+    <div class="interaction-container">
+        <a href="https://t.me/starfruitseduction" class="btn">Telegram</a>
+        <a href="https://www.instagram.com/starfruitseduction/" class="btn">Instagram</a>
+        <a href="https://x.com/" class="btn">X</a>
+    </div>
 
 </body>
 </html>
