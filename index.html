@@ -12,33 +12,37 @@
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { background: radial-gradient(circle at center, #1a0a1a 0%, #000 100%); color: white; font-family: 'Cinzel', serif; overflow-x: hidden; }
 
-        /* --- NAV AJUSTADO --- */
+        /* --- NAV REDUCIDO --- */
         nav { 
-            width: 100%; padding: 30px 5%; display: flex; align-items: center; justify-content: space-between;
+            width: 100%; 
+            /* Reducido el padding de 30px a 15px */
+            padding: 15px 5%; 
+            display: flex; align-items: center; justify-content: space-between;
             background: #000; border-bottom: 1px solid #222;
         }
 
         .brand-container { display: flex; flex-direction: column; align-items: center; }
-        .title-main { font-size: 1.8rem; color: var(--gold); letter-spacing: 6px; line-height: 1; }
-        .subtitle-row { display: flex; align-items: center; width: 100%; margin: 4px 0; }
+        /* Fuente del título ligeramente más pequeña */
+        .title-main { font-size: 1.4rem; color: var(--gold); letter-spacing: 4px; line-height: 1; }
+        .subtitle-row { display: flex; align-items: center; width: 100%; margin: 2px 0; }
         .line { flex: 1; height: 1px; background: linear-gradient(to right, rgba(204,164,100,0), rgba(204,164,100,0.45), rgba(204,164,100,0)); }
-        .title-sub { font-size: 0.7rem; color: var(--wine-red); padding: 0 8px; letter-spacing: 4px; text-transform: uppercase; }
-        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.55rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; margin-top: 2px; }
+        .title-sub { font-size: 0.6rem; color: var(--wine-red); padding: 0 5px; letter-spacing: 3px; text-transform: uppercase; }
+        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 5px; text-transform: uppercase; margin-top: 1px; }
 
-        /* Centro absoluto para INICIO, MODELOS y SERVICIOS */
-        .nav-center { display: flex; gap: 25px; }
-        .nav-center a { color: #fff; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
+        /* Navegación central más compacta */
+        .nav-center { display: flex; gap: 20px; }
+        .nav-center a { color: #fff; text-decoration: none; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
         .nav-center a:hover { color: var(--gold); }
         
-        /* Botón CONTACTO derecha */
+        /* Botón CONTACTO más pequeño */
         .btn-contact {
-            border: 1px solid var(--gold); padding: 8px 20px; border-radius: 50px;
-            color: var(--gold); text-decoration: none; font-size: 10px; text-transform: uppercase;
+            border: 1px solid var(--gold); padding: 6px 15px; border-radius: 50px;
+            color: var(--gold); text-decoration: none; font-size: 9px; text-transform: uppercase;
             transition: 0.4s;
         }
         .btn-contact:hover { background: var(--gold); color: black; }
 
-        /* Botones principales */
+        /* Botones principales sin cambios */
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .btn {
             padding: 15px 30px; background: transparent; color: white; border: 1px solid var(--gold);
