@@ -19,45 +19,29 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .hero-content > * {
-            animation: fadeInUp 1s ease-out forwards;
-            opacity: 0;
-        }
-
+        .hero-content > * { animation: fadeInUp 1s ease-out forwards; opacity: 0; }
         .hero-label { animation-delay: 0.2s; }
         .hero-title { animation-delay: 0.4s; }
         .hero-desc { animation-delay: 0.6s; }
-        .animate-btn:nth-child(1) { animation-delay: 0.8s; }
-        .animate-btn:nth-child(2) { animation-delay: 1.0s; }
-        .animate-btn:nth-child(3) { animation-delay: 1.2s; }
+        .animate-btn { animation-delay: 0.8s; }
 
-        /* --- NAV TRANSPARENTE TOTAL --- */
+        /* --- NAV --- */
         nav { 
             width: 100%; padding: 20px 5%; display: flex; align-items: center; justify-content: space-between;
             position: fixed; top: 0; z-index: 1000;
-            background: transparent !important;
-            backdrop-filter: none !important;
-            border-bottom: none !important;
-            animation: fadeIn 1.5s ease-in;
         }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        .brand-container { display: flex; flex-direction: column; align-items: center; gap: 0px; line-height: 1; width: 180px; }
+        .brand-container { display: flex; flex-direction: column; align-items: center; width: 180px; }
         .title-main { font-size: 1.5rem; color: var(--gold); letter-spacing: 6px; }
-        .subtitle-row { display: flex; align-items: center; justify-content: center; width: 100%; margin: 2px 0; }
+        .subtitle-row { display: flex; align-items: center; justify-content: center; width: 100%; }
         .line { width: 30px; height: 1px; background: var(--gold); margin: 0 5px; }
         .title-sub { font-size: 0.6rem; color: var(--wine-red); letter-spacing: 4px; text-transform: uppercase; }
-        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; margin-top: -2px; }
+        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; }
 
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { color: #fff; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
         .btn-contact {
             border: 1px solid var(--gold); padding: 8px 18px; border-radius: 50px;
             color: var(--gold); text-decoration: none; font-size: 9px; text-transform: uppercase;
-            transition: 0.4s;
         }
-        .btn-contact:hover { background: var(--gold); color: black; }
 
         /* --- SECCIÓN INICIO --- */
         #inicio {
@@ -65,25 +49,32 @@
             background: url('59440.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex; flex-direction: column; justify-content: center;
-            padding-left: 5%; padding-right: 5%; text-align: left;
+            padding: 0 5%;
         }
 
         .hero-content { max-width: 700px; }
-        .hero-label { color: var(--gold); font-size: 1rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 25px; display: block; font-family: 'Montserrat', sans-serif; }
-        .hero-title { font-size: 5rem; color: #fff; line-height: 1; margin-bottom: 30px; }
-        .hero-desc { color: var(--gray-text); font-family: 'Montserrat', sans-serif; margin-bottom: 40px; line-height: 1.6; font-size: 1.2rem; }
+        .hero-label { color: var(--gold); font-size: 1rem; letter-spacing: 5px; margin-bottom: 25px; display: block; font-family: 'Montserrat', sans-serif; }
+        .hero-title { font-size: clamp(2.5rem, 8vw, 5rem); color: #fff; line-height: 1; margin-bottom: 30px; }
+        .hero-desc { color: var(--gray-text); font-family: 'Montserrat', sans-serif; margin-bottom: 40px; line-height: 1.6; font-size: 1.1rem; }
         
-        /* Botones con efecto magnético */
+        /* Botones con efecto de escala */
         .btn-hero {
             display: flex; align-items: center; justify-content: center; gap: 12px;
-            width: 280px; padding: 18px; border: 1px solid var(--gold);
+            width: 100%; max-width: 280px; padding: 18px; border: 1px solid var(--gold);
             color: white; text-decoration: none; margin-bottom: 20px;
             border-radius: 50px; font-size: 1rem; letter-spacing: 3px; 
             text-transform: uppercase; font-family: 'Montserrat', sans-serif;
-            transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), background 0.4s, color 0.4s;
-            will-change: transform;
+            transition: transform 0.3s ease, background 0.4s, color 0.4s;
         }
-        .btn-hero:hover { background: var(--gold); color: black; }
+        .btn-hero:hover { transform: scale(1.05); background: var(--gold); color: black; }
+
+        /* Ajustes para celular */
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .hero-title { font-size: 3rem; }
+            #inicio { align-items: center; text-align: center; }
+            .hero-content { align-items: center; display: flex; flex-direction: column; }
+        }
     </style>
 </head>
 <body>
@@ -98,24 +89,14 @@
             </div>
             <h3 class="title-badge">AGENCY</h3>
         </div>
-        
-        <div class="nav-links">
-            <a href="#inicio">INICIO</a>
-            <a href="#servicios">SERVICIOS</a>
-        </div>
-
         <a href="mailto:tuemail@spaceemail.com" class="btn-contact">CONTACTO</a>
     </nav>
 
     <section id="inicio">
         <div class="hero-content">
             <span class="hero-label">— AGENCIA DE MODELOS —</span>
-            <h1 class="hero-title">
-                STARFRUIT <span style="color: var(--wine-red);">SEDUCTION</span>
-            </h1>
-            <p class="hero-desc">
-                Descubre un mundo de elegancia, exclusividad y profesionalismo con la agencia de modelos élite.
-            </p>
+            <h1 class="hero-title">STARFRUIT <span style="color: var(--wine-red);">SEDUCTION</span></h1>
+            <p class="hero-desc">Descubre un mundo de elegancia, exclusividad y profesionalismo con la agencia de modelos élite.</p>
             
             <a href="https://t.me/starfruitseduction" class="btn-hero animate-btn">
                 <i class="fab fa-telegram"></i> TELEGRAM
@@ -128,24 +109,6 @@
             </a>
         </div>
     </section>
-
-    <script>
-        const buttons = document.querySelectorAll('.btn-hero');
-
-        buttons.forEach(btn => {
-            btn.addEventListener('mousemove', (e) => {
-                const rect = btn.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-
-                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-            });
-
-            btn.addEventListener('mouseleave', () => {
-                btn.style.transform = `translate(0px, 0px)`;
-            });
-        });
-    </script>
 
 </body>
 </html>
