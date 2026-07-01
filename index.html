@@ -73,12 +73,15 @@
         .hero-title { font-size: 5rem; color: #fff; line-height: 1; margin-bottom: 30px; }
         .hero-desc { color: var(--gray-text); font-family: 'Montserrat', sans-serif; margin-bottom: 40px; line-height: 1.6; font-size: 1.2rem; }
         
+        /* Botones con efecto magnético */
         .btn-hero {
             display: flex; align-items: center; justify-content: center; gap: 12px;
             width: 280px; padding: 18px; border: 1px solid var(--gold);
             color: white; text-decoration: none; margin-bottom: 20px;
             border-radius: 50px; font-size: 1rem; letter-spacing: 3px; 
-            text-transform: uppercase; transition: 0.4s; font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase; font-family: 'Montserrat', sans-serif;
+            transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), background 0.4s, color 0.4s;
+            will-change: transform;
         }
         .btn-hero:hover { background: var(--gold); color: black; }
     </style>
@@ -125,6 +128,24 @@
             </a>
         </div>
     </section>
+
+    <script>
+        const buttons = document.querySelectorAll('.btn-hero');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = `translate(0px, 0px)`;
+            });
+        });
+    </script>
 
 </body>
 </html>
