@@ -13,23 +13,25 @@
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { background: #000; color: white; font-family: 'Cinzel', serif; overflow-x: hidden; }
 
-        /* --- ANIMACIONES GLOBALES --- */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* --- ANIMACIÓN DE REBOTE (BOUNCE) --- */
+        @keyframes bounceInUp {
+            0% { opacity: 0; transform: translateY(100px); }
+            60% { opacity: 1; transform: translateY(-20px); }
+            80% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
         }
 
         .hero-content > * {
-            animation: fadeInUp 1s ease-out forwards;
+            animation: bounceInUp 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
             opacity: 0;
         }
 
         .hero-label { animation-delay: 0.2s; }
         .hero-title { animation-delay: 0.4s; }
         .hero-desc { animation-delay: 0.6s; }
-        .animate-btn:nth-child(1) { animation-delay: 0.8s; }
-        .animate-btn:nth-child(2) { animation-delay: 1.0s; }
-        .animate-btn:nth-child(3) { animation-delay: 1.2s; }
+        .animate-btn:nth-child(4) { animation-delay: 0.8s; }
+        .animate-btn:nth-child(5) { animation-delay: 1.0s; }
+        .animate-btn:nth-child(6) { animation-delay: 1.2s; }
 
         /* --- NAV TRANSPARENTE TOTAL --- */
         nav { 
@@ -73,7 +75,7 @@
         .hero-title { font-size: 5rem; color: #fff; line-height: 1; margin-bottom: 30px; }
         .hero-desc { color: var(--gray-text); font-family: 'Montserrat', sans-serif; margin-bottom: 40px; line-height: 1.6; font-size: 1.2rem; }
         
-        /* Botones con efecto magnético */
+        /* Botones con efecto magnético y transición suave */
         .btn-hero {
             display: flex; align-items: center; justify-content: center; gap: 12px;
             width: 280px; padding: 18px; border: 1px solid var(--gold);
@@ -138,10 +140,12 @@
                 const x = e.clientX - rect.left - rect.width / 2;
                 const y = e.clientY - rect.top - rect.height / 2;
 
+                // Efecto magnético
                 btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
             });
 
             btn.addEventListener('mouseleave', () => {
+                // Regreso suave al centro
                 btn.style.transform = `translate(0px, 0px)`;
             });
         });
