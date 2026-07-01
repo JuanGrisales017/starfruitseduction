@@ -55,4 +55,93 @@
 
         .brand-container { display: flex; flex-direction: column; align-items: center; gap: 0px; line-height: 1; width: 180px; }
         .title-main { font-size: 1.5rem; color: var(--gold); letter-spacing: 6px; }
-        .subtitle-row { display
+        .subtitle-row { display: flex; align-items: center; justify-content: center; width: 100%; margin: 2px 0; }
+        .line { width: 30px; height: 1px; background: var(--gold); margin: 0 5px; }
+        .title-sub { font-size: 0.6rem; color: var(--wine-red); letter-spacing: 4px; text-transform: uppercase; }
+        .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; margin-top: -2px; }
+
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: #fff; text-decoration: none; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-family: sans-serif; }
+        .btn-contact {
+            border: 1px solid var(--gold); padding: 8px 18px; border-radius: 50px;
+            color: var(--gold); text-decoration: none; font-size: 9px; text-transform: uppercase;
+            transition: 0.4s;
+        }
+        .btn-contact:hover { background: var(--gold); color: black; }
+
+        /* --- SECCIÓN INICIO --- */
+        #inicio {
+            min-height: 100vh; width: 100%;
+            background: url('59440.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex; flex-direction: column; justify-content: center;
+            padding-left: 5%; padding-right: 5%; text-align: left;
+        }
+
+        .hero-content { max-width: 700px; }
+        .hero-label { color: var(--gold); font-size: 1rem; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 25px; display: block; font-family: 'Montserrat', sans-serif; }
+        .hero-title { font-size: 5rem; color: #fff; line-height: 1; margin-bottom: 30px; }
+        .hero-desc { color: var(--gray-text); font-family: 'Montserrat', sans-serif; margin-bottom: 40px; line-height: 1.6; font-size: 1.2rem; }
+        
+        .btn-hero {
+            display: flex; align-items: center; justify-content: center; gap: 12px;
+            width: 280px; padding: 18px; border: 1px solid var(--gold);
+            color: white; text-decoration: none; margin-bottom: 20px;
+            border-radius: 50px; font-size: 1rem; letter-spacing: 3px; 
+            text-transform: uppercase; font-family: 'Montserrat', sans-serif;
+            transition: background 0.4s, color 0.4s;
+        }
+        
+        /* El rebote se activa aquí */
+        .btn-hero:hover { 
+            background: var(--gold); 
+            color: black; 
+            animation: rubberBand 0.8s ease-in-out; 
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="brand-container">
+            <h1 class="title-main">STARFRUIT</h1>
+            <div class="subtitle-row">
+                <span class="line"></span>
+                <h2 class="title-sub">SEDUCTION</h2>
+                <span class="line"></span>
+            </div>
+            <h3 class="title-badge">AGENCY</h3>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#inicio">INICIO</a>
+            <a href="#servicios">SERVICIOS</a>
+        </div>
+
+        <a href="mailto:tuemail@spaceemail.com" class="btn-contact">CONTACTO</a>
+    </nav>
+
+    <section id="inicio">
+        <div class="hero-content">
+            <span class="hero-label">— AGENCIA DE MODELOS —</span>
+            <h1 class="hero-title">
+                STARFRUIT <span style="color: var(--wine-red);">SEDUCTION</span>
+            </h1>
+            <p class="hero-desc">
+                Descubre un mundo de elegancia, exclusividad y profesionalismo con la agencia de modelos élite.
+            </p>
+            
+            <a href="https://t.me/starfruitseduction" class="btn-hero animate-btn">
+                <i class="fab fa-telegram"></i> TELEGRAM
+            </a>
+            <a href="https://www.instagram.com/starfruitseduction/" class="btn-hero animate-btn">
+                <i class="fab fa-instagram"></i> INSTAGRAM
+            </a>
+            <a href="https://x.com/tuusuario" class="btn-hero animate-btn">
+                <i class="fab fa-x-twitter"></i> X
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
