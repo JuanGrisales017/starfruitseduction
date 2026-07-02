@@ -33,12 +33,18 @@
         .line { width: 30px; height: 1px; background: var(--gold); margin: 0 5px; }
         .title-sub { font-size: 0.6rem; color: var(--wine-red); letter-spacing: 4px; text-transform: uppercase; }
         .title-badge { font-family: 'Montserrat', sans-serif; font-size: 0.45rem; color: var(--gray-text); letter-spacing: 7px; text-transform: uppercase; }
-        .btn-contact { border: 1px solid var(--gold); padding: 8px 18px; border-radius: 50px; color: var(--gold); text-decoration: none; font-size: 9px; text-transform: uppercase; }
+        
+        /* Botón contacto con efecto aplicado */
+        .btn-contact { 
+            border: 1px solid var(--gold); padding: 8px 18px; border-radius: 50px; 
+            color: var(--gold); text-decoration: none; font-size: 9px; text-transform: uppercase;
+            transition: transform 0.3s ease, background 0.4s, color 0.4s;
+        }
+        .btn-contact:hover { transform: scale(1.1); background: var(--gold); color: black; }
 
-        /* --- SECCIÓN INICIO CON TU IMAGEN --- */
+        /* --- SECCIÓN INICIO --- */
         #inicio {
             min-height: 100vh; width: 100%;
-            /* AQUÍ ESTÁ TU IMAGEN */
             background: url('eec90190-ae0e-4283-92a2-bc521b5644cf.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex; flex-direction: column; justify-content: center;
